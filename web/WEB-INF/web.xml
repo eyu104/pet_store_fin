@@ -14,5 +14,15 @@
         <url-pattern>/mainForm</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>CategoryFoemServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.CategoryFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CategoryFoemServlet</servlet-name>
+        <url-pattern>/categoryForm</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>

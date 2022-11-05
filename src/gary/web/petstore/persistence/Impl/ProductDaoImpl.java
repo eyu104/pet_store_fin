@@ -26,7 +26,7 @@ public class ProductDaoImpl implements ProductDao {
         try {
             Connection connection = DBUtil.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(getProductListByCategoryString);
-            preparedStatement.setString(1, "categoryId");
+            preparedStatement.setString(1, categoryId);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()){
@@ -54,12 +54,13 @@ public class ProductDaoImpl implements ProductDao {
         try {
             Connection connection = DBUtil.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(getProductString);
-            preparedStatement.setString(1, "productId");
+            preparedStatement.setString(1, productId);
             ResultSet resultSet = preparedStatement.executeQuery();
 
            if (resultSet.next()){
                 product = new Product();
                 product.setProductId(resultSet.getString(1));
+
                 product.setName(resultSet.getString(2));
                 product.setDescription(resultSet.getString(3));
                 product.setCategoryId(resultSet.getString(4));
@@ -80,13 +81,16 @@ public class ProductDaoImpl implements ProductDao {
         try {
             Connection connection = DBUtil.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(searchProductListString);
-            preparedStatement.setString(1, "keywords");
+            preparedStatement.setString(1, keywords);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()){
+                System.out.println("0");
                 Product product = new Product();
                 product.setProductId(resultSet.getString(1));
                 product.setName(resultSet.getString(2));
+//                System.out.println(resultSet.getString(2));
+//                System.out.println(resultSet.getString("NAME"));
                 product.setDescription(resultSet.getString(3));
                 product.setCategoryId(resultSet.getString(4));
                 productList.add(product);
@@ -101,5 +105,10 @@ public class ProductDaoImpl implements ProductDao {
         }
 
         return productList;
+    }
+
+    public static void main(String[] args) {
+        ProductDao productDao = new ProductDaoImpl();
+        productDao.getProduct("K9-PO-02");
     }
 }

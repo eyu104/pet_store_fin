@@ -44,7 +44,7 @@ public class ItemDaoImpl implements ItemDao {
         try {
             Connection connection = DBUtil.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(getInventoryQuantityString);
-            preparedStatement.setString(1,"itemId");
+            preparedStatement.setString(1,itemId);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()){
                 Quantity = resultSet.getInt("qty");
@@ -64,7 +64,7 @@ public class ItemDaoImpl implements ItemDao {
         try {
             Connection connection = DBUtil.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(getItemListByProductString);
-            preparedStatement.setString(1,"productId");
+            preparedStatement.setString(1,productId);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()){
@@ -103,7 +103,7 @@ public class ItemDaoImpl implements ItemDao {
         try {
             Connection connection = DBUtil.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(getItemString);
-            preparedStatement.setString(1,"itemId");
+            preparedStatement.setString(1,itemId);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()){

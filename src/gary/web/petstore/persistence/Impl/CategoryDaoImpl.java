@@ -16,7 +16,7 @@ public class CategoryDaoImpl implements CategoryDao {
     private static final String GET_CATEGORY_LIST =
             "SELECT CATID AS categoryId,NAME,DESCN AS description FROM CATEGORY";
     private static final String GET_CATEGORY =
-            "SELECT CATID AS categoryId,NAME,DESCN AS description FROM CATEGORY WHERE CATID = ?";
+            "SELECT CATID AS categoryId,NAME,DESCN AS description FROM CATEGORY WHERE CATID =?";
 
     @Override
     public List<Category> getCategoryList() {
@@ -30,13 +30,16 @@ public class CategoryDaoImpl implements CategoryDao {
                 Category category = new Category();
                 category.setCategoryId(resultSet.getString("categoryId"));
                 category.setName(resultSet.getString("NAME"));
+                System.out.println(resultSet.getString("NAME"));
+                System.out.println(resultSet.getString("description"));
                 category.setDescription(resultSet.getString("description"));
                 categoryList.add(category);
-                DBUtil.closeResultSet(resultSet);
-                DBUtil.closeStatement(statement);
-                DBUtil.closeConnection(connection);
+
 
             }
+            DBUtil.closeResultSet(resultSet);
+            DBUtil.closeStatement(statement);
+            DBUtil.closeConnection(connection);
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -51,7 +54,7 @@ public class CategoryDaoImpl implements CategoryDao {
         try{
             Connection connection = DBUtil.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(GET_CATEGORY);
-            preparedStatement.setString(1,"categoryId");
+            preparedStatement.setString(1,categoryId);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()){
                 category = new Category();
@@ -68,5 +71,10 @@ public class CategoryDaoImpl implements CategoryDao {
             e.printStackTrace();
         }
         return category;
+    }
+
+    public static void main(String[] args) {
+        CategoryDao categoryDao = new CategoryDaoImpl();
+        categoryDao.getCategory("BIRDS");
     }
 }
