@@ -13,5 +13,6 @@ public class MainFormServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher(MAIN_FORM).forward(req,resp);
+
     }
 }

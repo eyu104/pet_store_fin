@@ -8,9 +8,11 @@
         <servlet-name>MainFormServlet</servlet-name>
         <servlet-class>gary.web.petstore.web.servlet.MainFormServlet</servlet-class>
     </servlet>
-    
+
     <servlet-mapping>
         <servlet-name>MainFormServlet</servlet-name>
         <url-pattern>/mainForm</url-pattern>
     </servlet-mapping>
+
+
 </web-app>
