@@ -27,7 +27,7 @@
 <%--                    <stripes:param name="itemId" value="${item.itemId}" />--%>
 <%--                    ${item.itemId}--%>
 <%--                </stripes:link>--%>
-                <a href="">${item.itemId}</a>
+                <a href="itemForm?itemId=${item.itemId}">${item.itemId}</a>
                 </td>
                 <td>${item.product.productId}</td>
                 <td>${item.attribute1} ${item.attribute2} ${item.attribute3}
