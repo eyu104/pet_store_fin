@@ -24,5 +24,17 @@
         <url-pattern>/categoryForm</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ProductFoemServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.ProductFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ProductFoemServlet</servlet-name>
+        <url-pattern>/productForm</url-pattern>
+    </servlet-mapping>
+
+
+
 
 </web-app>
