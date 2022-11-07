@@ -50,7 +50,7 @@
 <%--                Add to Cart--%>
 <%--            </stripes:link>--%>
 
-                <a href="">Add to Cart</a>
+                <a href="addItemToCart?workingItemId=${item.itemId}" class="Button">Add to Cart</a>
             </td>
         </tr>
     </table>

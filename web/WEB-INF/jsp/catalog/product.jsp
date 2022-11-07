@@ -41,7 +41,7 @@
 <%--                    <stripes:param name="workingItemId" value="${item.itemId}" />--%>
 <%--                    Add to Cart--%>
 <%--                </stripes:link>--%>
-                <a href="" class="Button">Add to Cart</a>
+                <a href="addItemToCart?workingItemId=${item.itemId}" class="Button">Add to Cart</a>
                 </td>
             </tr>
         </c:forEach>

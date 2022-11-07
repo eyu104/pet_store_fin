@@ -44,14 +44,14 @@ public class ItemDaoImpl implements ItemDao {
 
     @Override
     public int getInventoryQuantity(String itemId) {
-        Integer Quantity = null;
+        int Quantity = -1;
         try {
             Connection connection = DBUtil.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(getInventoryQuantityString);
             preparedStatement.setString(1,itemId);
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()){
-                Quantity = resultSet.getInt("qty");
+                Quantity = resultSet.getInt(1);
             }
             DBUtil.closeResultSet(resultSet);
             DBUtil.closePreparedStatement(preparedStatement);
