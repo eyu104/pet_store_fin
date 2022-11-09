@@ -17,31 +17,31 @@
 
 <div id="Header">
 
-        <div id="Logo" style="background-color: #EAAC00FF">
+        <div id="Logo">
             <div id="LogoContent">
                 <a href="mainForm"><img src="images/storelogo.gif" width="80" /></a>
 
             </div>
         </div>
 
-        <div id="Menu" style="background-color: #EAAC00FF">
+        <div id="Menu">
             <div id="MenuContent">
                 <a href="cartForm"><img align="middle" name="img_cart" src="images/cart.gif" width="30"/></a>
                 <img align="middle" src="images/separator.gif" />
                 <c:if test="${sessionScope.loginAccount == null}">
-                    <a href="signOnForm" style="color: white"><b>Sign In</b></a><img align="middle" src="images/separator.gif" />
+                    <a href="signOnForm"><b>Sign In</b></a><img align="middle" src="images/separator.gif" />
                 </c:if>
                 <c:if test="${sessionScope.loginAccount != null}">
-                    <a href="" style="color: white"><b>Sign Out</b></a>
+                    <a href=""signOff"" style="color: white"><b>Sign Out</b></a>
                     <img align="middle" src="images/separator.gif" />
                     <a href="myAccount">My Account</a>
                     <img align="middle" src="images/separator.gif" />
                 </c:if>
-                <a href="help.html"><img align="middle" src="images/question.gif" width="35"/></a>
+                <a href="help.html"><img align="middle" src="images/question.gif" width="30"/></a>
             </div>
         </div>
 
-        <div id="Search" style="background-color: #EAAC00FF">
+        <div id="Search">
 
             <div id="SearchContent">
                 <form action="" method="post">

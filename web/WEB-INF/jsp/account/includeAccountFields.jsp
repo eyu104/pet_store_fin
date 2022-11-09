@@ -9,10 +9,10 @@
 <%--            <stripes:text name="account.firstName" />--%>
 
             <c:if test="${sessionScope.loginAccount != null}">
-                <input type="text" name="account.firstName" value="${sessionScope.loginAccount.firstName}">
+                <input type="text" name="account_firstName" value="${sessionScope.loginAccount.firstName}">
             </c:if>
             <c:if test="${sessionScope.loginAccount == null}">
-                <input type="text" name="account.firstName">
+                <input type="text" name="account_firstName">
             </c:if>
         </td>
     </tr>
@@ -22,10 +22,10 @@
 <%--            <stripes:text name="account.lastName" />--%>
 
             <c:if test="${sessionScope.loginAccount != null}">
-                <input type="text" name="account.lastName" value="${sessionScope.loginAccount.lastName}">
+                <input type="text" name="account_lastName" value="${sessionScope.loginAccount.lastName}">
             </c:if>
             <c:if test="${sessionScope.loginAccount == null}">
-                <input type="text" name="account.lastName">
+                <input type="text" name="account_lastName">
             </c:if>
         </td>
     </tr>
@@ -35,10 +35,10 @@
 <%--            <stripes:text size="40" name="account.email" />--%>
 
             <c:if test="${sessionScope.loginAccount != null}">
-                <input type="text" size="40" name="account.email" value="${sessionScope.loginAccount.email}">
+                <input type="text" size="40" name="account_email" value="${sessionScope.loginAccount.email}">
             </c:if>
             <c:if test="${sessionScope.loginAccount == null}">
-                <input type="text" size="40" name="account.email">
+                <input type="text" size="40" name="account_email">
             </c:if>
         </td>
 
@@ -49,10 +49,10 @@
 <%--            <stripes:text name="account.phone" />--%>
 
             <c:if test="${sessionScope.loginAccount != null}">
-                <input type="text" name="account.phone" value="${sessionScope.loginAccount.phone}">
+                <input type="text" name="account_phone" value="${sessionScope.loginAccount.phone}">
             </c:if>
             <c:if test="${sessionScope.loginAccount == null}">
-                <input type="text" name="account.phone">
+                <input type="text" name="account_phone">
             </c:if>
         </td>
     </tr>
@@ -62,10 +62,10 @@
 <%--            <stripes:text size="40" name="account.address1" />--%>
 
             <c:if test="${sessionScope.loginAccount != null}">
-                <input type="text" size="40" name="account.address1" value="${sessionScope.loginAccount.address1}">
+                <input type="text" size="40" name="account_address1" value="${sessionScope.loginAccount.address1}">
             </c:if>
             <c:if test="${sessionScope.loginAccount == null}">
-                <input type="text" size="40" name="account.address1">
+                <input type="text" size="40" name="account_address1">
             </c:if>
         </td>
     </tr>
@@ -75,10 +75,10 @@
 <%--            <stripes:text size="40" name="account.address2" />--%>
 
             <c:if test="${sessionScope.loginAccount != null}">
-                <input type="text" size="40" name="account.address2" value="${sessionScope.loginAccount.address2}">
+                <input type="text" size="40" name="account_address2" value="${sessionScope.loginAccount.address2}">
             </c:if>
             <c:if test="${sessionScope.loginAccount == null}">
-                <input type="text" size="40" name="account.address2">
+                <input type="text" size="40" name="account_address2">
             </c:if>
         </td>
     </tr>
@@ -88,10 +88,10 @@
 <%--            <stripes:text name="account.city" />--%>
 
             <c:if test="${sessionScope.loginAccount != null}">
-                <input type="text" name="account.city" value="${sessionScope.loginAccount.city}">
+                <input type="text" name="account_city" value="${sessionScope.loginAccount.city}">
             </c:if>
             <c:if test="${sessionScope.loginAccount == null}">
-                <input type="text" name="account.city">
+                <input type="text" name="account_city">
             </c:if>
         </td>
     </tr>
@@ -101,10 +101,10 @@
 <%--            <stripes:text size="4" name="account.state" />--%>
 
             <c:if test="${sessionScope.loginAccount != null}">
-                <input type="text" size="4" name="account.state" value="${sessionScope.loginAccount.state}">
+                <input type="text" size="4" name="account_state" value="${sessionScope.loginAccount.state}">
             </c:if>
             <c:if test="${sessionScope.loginAccount == null}">
-                <input type="text" size="4" name="account.state">
+                <input type="text" size="4" name="account_state">
             </c:if>
         </td>
     </tr>
@@ -115,10 +115,10 @@
 
 
             <c:if test="${sessionScope.loginAccount != null}">
-                <input type="text" size="10" name="account.zip" value="${sessionScope.loginAccount.zip}">
+                <input type="text" size="10" name="account_zip" value="${sessionScope.loginAccount.zip}">
             </c:if>
             <c:if test="${sessionScope.loginAccount == null}">
-                <input type="text" size="10" name="account.zip">
+                <input type="text" size="10" name="account_zip">
             </c:if>
         </td>
     </tr>
@@ -127,10 +127,10 @@
         <td>
 <%--            <stripes:text size="15" name="account.country" />--%>
             <c:if test="${sessionScope.loginAccount != null}">
-                <input type="text" size="15" name="account.country" value="${sessionScope.loginAccount.country}">
+                <input type="text" size="15" name="account_country" value="${sessionScope.loginAccount.country}">
             </c:if>
             <c:if test="${sessionScope.loginAccount == null}">
-                <input type="text" size="15" name="account.country">
+                <input type="text" size="15" name="account_country">
             </c:if>
 
 
@@ -153,9 +153,15 @@
 
 
 
-            <select name="account.languagePreference">
+            <select name="account_languagePreference">
                 <c:forEach var="language" items="${sessionScope.languages}">
-                    <option name="account.languagePreference" value="${language}" >${language}</option>
+                    <c:if test="${sessionScope.loginAccount.languagePreference.equals(language)}">
+                        <option name="account_languagePreference" selected value="${language}" >${language}</option>
+                    </c:if>
+                    <c:if test="${!sessionScope.loginAccount.languagePreference.equals(language)}">
+                        <option name="account_languagePreference" value="${language}" >${language}</option>
+                    </c:if>
+
                 </c:forEach>
             </select>
 
@@ -171,9 +177,15 @@
 <%--            <stripes:options-collection collection="${sessionScope.categories}" />--%>
 <%--        </stripes:select>--%>
 
-            <select name="account.favouriteCategoryId">
+            <select name="account_favouriteCategoryId">
                 <c:forEach var="category" items="${sessionScope.categories}">
-                    <option name="account.favouriteCategoryId" value="${category}">${category}</option>
+                    <c:if test="${sessionScope.loginAccount.favouriteCategoryId.equals(category)}">
+                        <option name="account_favouriteCategoryId" selected value="${category}">${category}</option>
+                    </c:if>
+                    <c:if test="${!sessionScope.loginAccount.favouriteCategoryId.equals(category)}">
+                        <option name="account_favouriteCategoryId" value="${category}">${category}</option>
+                    </c:if>
+
                 </c:forEach>
             </select>
 
@@ -185,14 +197,14 @@
 <%--            <stripes:checkbox name="account.listOption" />--%>
             <c:if test="${sessionScope.loginAccount != null}">
                 <c:if test="${sessionScope.loginAccount.listOption == true}">
-                    <input type="checkbox" checked="checked" name="account.bannerOption">
+                    <input type="checkbox" checked="checked" name="account_listOption">
                 </c:if>
                 <c:if test="${sessionScope.loginAccount.listOption != true}">
-                    <input type="checkbox"  name="account.bannerOption">
+                    <input type="checkbox"  name="account_listOption">
                 </c:if>
             </c:if>
             <c:if test="${sessionScope.loginAccount == null}">
-                <input type="checkbox" name="account.bannerOption">
+                <input type="checkbox" name="account_listOption">
             </c:if>
         </td>
     </tr>
@@ -202,14 +214,14 @@
 <%--            <stripes:checkbox name="account.bannerOption" />--%>
             <c:if test="${sessionScope.loginAccount != null}">
                 <c:if test="${sessionScope.loginAccount.bannerOption == true}">
-                    <input type="checkbox" checked="checked" name="account.bannerOption">
+                    <input type="checkbox" checked="checked" name="account_bannerOption">
                 </c:if>
                 <c:if test="${sessionScope.loginAccount.bannerOption != true}">
-                    <input type="checkbox"  name="account.bannerOption">
+                    <input type="checkbox"  name="account_bannerOption">
                 </c:if>
             </c:if>
             <c:if test="${sessionScope.loginAccount == null}">
-                <input type="checkbox" name="account.bannerOption">
+                <input type="checkbox" name="account_bannerOption">
             </c:if>
 
 

@@ -28,7 +28,7 @@
 <%--  <stripes:submit name="newAccount" value="Save Account Information" />--%>
 
 <%--</stripes:form>--%>
-  <form action="" method="post">
+  <form action="newAccount?" method="post">
     <h3>User Information</h3>
 
     <table>
