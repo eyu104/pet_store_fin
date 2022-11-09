@@ -13,7 +13,7 @@
         <p>
             Username:<input type="text" name="username"><br />
             Password:<input type="password" name="password"><br />
-            Verification code:<input type="text" name="secode"><img border="0" src="checkCode"><br/>
+            Verification code:<input type="text" name="secode"><img border="0" src="checkCode" onclick="this.src='checkCode?'+Math.random();"><br/>
         </p>
         <input type="submit" name="signon" value="Login">
     </form>
