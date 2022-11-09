@@ -1,9 +1,9 @@
 <%@ include file="../common/top.jsp"%>
 
-<div id="BackLink">
+<%--<div id="BackLink">--%>
 
-    <a href="mainForm">Return to Main Menu</a>
-</div>
+<%--    <a href="mainForm">Return to Main Menu</a>--%>
+<%--</div>--%>
 
 <div id="Catalog">
 
