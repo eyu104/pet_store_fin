@@ -22,6 +22,7 @@ h1 {
     line-height: 3ex;
     font-weight: 900;
     color: #666;
+    text-align: center;
 }
 
 h2 {
@@ -244,6 +245,9 @@ body>#Banner {
     color: #333;
     background-color: #FFF;
     border-width: 0;
+
+
+
 }
 
 #Separator {
@@ -321,3 +325,13 @@ body>#Banner {
     background-color:#ccc;
     text-align:left;
 }
+
+/*.parentBox{*/
+/*    display: table;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.Box{*/
+/*    display: table-cell;*/
+/*    vertical-align: middle;*/
+/*}*/

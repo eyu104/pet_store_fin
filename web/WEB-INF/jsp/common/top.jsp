@@ -19,25 +19,25 @@
 
         <div id="Logo">
             <div id="LogoContent">
-                <a href="mainForm"><img src="images/logo-topbar.gif" /></a>
+                <a href="mainForm"><img src="images/storelogo.gif" width="80" /></a>
 
             </div>
         </div>
 
         <div id="Menu">
             <div id="MenuContent">
-                <a href="cartForm"><img align="middle" name="img_cart" src="images/cart.gif" /></a>
+                <a href="cartForm"><img align="middle" name="img_cart" src="images/cart.gif" width="30"/></a>
                 <img align="middle" src="images/separator.gif" />
                 <c:if test="${sessionScope.loginAccount == null}">
-                    <a href="signOnForm">Sign In</a><img align="middle" src="images/separator.gif" />
+                    <a href="signOnForm"><b>Sign In</b></a><img align="middle" src="images/separator.gif" />
                 </c:if>
                 <c:if test="${sessionScope.loginAccount != null}">
-                    <a href="">Sign Out</a>
+                    <a href=""><b>Sign Out</b></a>
                     <img align="middle" src="images/separator.gif" />
                     <a href="myAccount">My Account</a>
                     <img align="middle" src="images/separator.gif" />
                 </c:if>
-                <a href="help.html">?</a>
+                <a href="help.html"><img align="middle" src="images/question.gif" width="30"/></a>
             </div>
         </div>
 
