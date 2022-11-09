@@ -30,13 +30,17 @@ public class SignOnServlet extends HttpServlet {
         }else {
             AccountService accountService = new AccountService();
             Account loginAccount = accountService.getAccount(username,password);
+            List<String> languages = accountService.getLanguages();
             if (loginAccount == null){
                 this.Msg = "用户名或密码错误";
                 req.getRequestDispatcher(SIGN_ON_FORM).forward(req,resp);
             }else {
                 loginAccount.setPassword(null);
                 HttpSession session = req.getSession();
+                List<String> categories = accountService.getCategories();
                 session.setAttribute("loginAccount",loginAccount);
+                session.setAttribute("languages",languages);
+                session.setAttribute("categories",categories);
                 if (loginAccount.isListOption()){
                     CatalogService catalogService = new CatalogService();
                     List<Product> myList = catalogService.getProductListByCategory(loginAccount.getFavouriteCategoryId());

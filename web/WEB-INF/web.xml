@@ -114,4 +114,24 @@
         <url-pattern>/signOn</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>NewAccountFormServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.NewAccountFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>NewAccountFormServlet</servlet-name>
+        <url-pattern>/newAccountForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MyAccountServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.MyAccountServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MyAccountServlet</servlet-name>
+        <url-pattern>/myAccount</url-pattern>
+    </servlet-mapping>
+
 </web-app>
