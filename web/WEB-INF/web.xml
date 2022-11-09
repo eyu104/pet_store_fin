@@ -133,5 +133,15 @@
         <servlet-name>MyAccountServlet</servlet-name>
         <url-pattern>/myAccount</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>SecodeServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.SecodeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SecodeServlet</servlet-name>
+        <url-pattern>/checkCode</url-pattern>
+    </servlet-mapping>
 
 </web-app>
