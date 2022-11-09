@@ -2,10 +2,10 @@
 
 <div id="Footer">
 
-    <div id="PoweredBy">&nbsp<a href="http://www.csu.edu.cn">www.csu.edu.cn</a>
+    <div id="PoweredBy" style="background-color: #EAAC00FF">&nbsp<a href="http://www.csu.edu.cn" style="color: white"><b>www.csu.edu.cn</b></a>
     </div>
 
-    <div id="Banner">
+    <div id="Banner" style="background-color: #EAAC00FF">
         <!-- 登录用户的banner -->
         <c:if test="${sessionScope.loginAccount != null }">
 
