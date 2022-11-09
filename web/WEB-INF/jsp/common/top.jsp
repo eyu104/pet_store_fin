@@ -1,10 +1,10 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="utf-8" language="java"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <!DOCTYPE html>
 
-<html>
+<html lang="zh">
 
 <head>
     <title>MyPetStore</title>
@@ -32,7 +32,7 @@
                     <a href="signOnForm">Sign In</a><img align="middle" src="images/separator.gif" />
                 </c:if>
                 <c:if test="${sessionScope.loginAccount != null}">
-                    <a href="">Sign Out</a>
+                    <a href="signOff">Sign Out</a>
                     <img align="middle" src="images/separator.gif" />
                     <a href="myAccount">My Account</a>
                     <img align="middle" src="images/separator.gif" />

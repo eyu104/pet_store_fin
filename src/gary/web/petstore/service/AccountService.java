@@ -5,6 +5,7 @@ import gary.web.petstore.domain.Product;
 import gary.web.petstore.persistence.AccountDao;
 import gary.web.petstore.persistence.Impl.AccountDaoImpl;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -53,5 +54,19 @@ public class AccountService {
     }
     public String getUsername() {
         return account.getUsername();
+    }
+
+    public void insertAccount(Account account) throws SQLException {
+        accountDao.insertAccount(account);
+        accountDao.insertProfile(account);
+        accountDao.insertSignon(account);
+    }
+    public void updateAccount(Account account) throws SQLException {
+        accountDao.updateAccount(account);
+        accountDao.updateProfile(account);
+
+        if (account.getPassword() != null && account.getPassword().length() > 0) {
+            accountDao.updateSignon(account);
+        }
     }
 }

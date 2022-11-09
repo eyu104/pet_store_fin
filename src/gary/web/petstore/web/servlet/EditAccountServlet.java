@@ -1,8 +1,6 @@
 package gary.web.petstore.web.servlet;
 
 import gary.web.petstore.domain.Account;
-import gary.web.petstore.persistence.AccountDao;
-import gary.web.petstore.persistence.Impl.AccountDaoImpl;
 import gary.web.petstore.service.AccountService;
 
 import javax.servlet.ServletException;
@@ -11,9 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.sql.SQLException;
 
-public class NewAccountServlet extends HttpServlet {
+public class EditAccountServlet extends HttpServlet {
     private String username;
     private String password;
     private String repeatedPassword;
@@ -34,11 +31,12 @@ public class NewAccountServlet extends HttpServlet {
     private String Msg;
     private Account newAccount = new Account();
     private AccountService accountService = new AccountService();
+    private static final String MY_ACCOUNT_FORM = "/WEB-INF/jsp/account/editAccountForm.jsp";
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
-
-        username = req.getParameter("username");
+        Account tem =(Account)session.getAttribute("loginAccount");
+        username = tem.getUsername();
         password = req.getParameter("password");
         repeatedPassword = req.getParameter("repeatedPassword");
         account_firstName = req.getParameter("account_firstName");
@@ -52,9 +50,7 @@ public class NewAccountServlet extends HttpServlet {
         account_zip = req.getParameter("account_zip");
         account_country = req.getParameter("account_country");
         account_languagePreference = req.getParameter("account_languagePreference");
-//        account_languagePreference = (String) session.getAttribute("language");
         account_favouriteCategoryId = req.getParameter("account_favouriteCategoryId");
-//        account_favouriteCategoryId = (String) session.getAttribute("category");
         String bannerOption = req.getParameter("account_bannerOption");
         String listOption = req.getParameter("account_listOption");
 
@@ -85,16 +81,17 @@ public class NewAccountServlet extends HttpServlet {
         }
         newAccount.setListOption(account_listOption);
         newAccount.setBannerOption(account_bannerOption);
-
-//        System.out.println(account_languagePreference);
-//        System.out.println(account_favouriteCategoryId);
         try {
-            accountService.insertAccount(newAccount);
-        } catch (SQLException e) {
+            accountService.updateAccount(newAccount);
+        }catch (Exception e){
             e.printStackTrace();
         }
-        resp.sendRedirect("mainForm");
+        session.setAttribute("loginAccount",newAccount);
+        req.getRequestDispatcher("myAccount").forward(req,resp);
     }
+
+
+
 
     private boolean validate(){
 

@@ -28,13 +28,13 @@
 <%--</stripes:form>--%>
 
 
-  <form action="" method="post">
+  <form action="editAccount" method="post">
     <h3>User Information</h3>
 
     <table>
       <tr>
         <td>User ID:</td>
-        <td>${actionBean.username}</td>
+        <td>${sessionScope.loginAccount.username}</td>
       </tr>
       <tr>
         <td>New password:</td>
@@ -62,7 +62,7 @@
 <%--  <stripes:link--%>
 <%--        beanclass="org.mybatis.jpetstore.web.actions.OrderActionBean"--%>
 <%--        event="listOrders">My Orders</stripes:link>--%>
-  <a href="listOrders" >My Orders</a>
+  <a href="listOrdersForm" >My Orders</a>
 </div>
 
 <%@ include file="../common/bottom.jsp"%>
