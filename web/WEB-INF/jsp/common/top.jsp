@@ -53,15 +53,15 @@
         </div>
 
         <div id="QuickLinks">
-            <a href="categoryForm?categoryId=FISH"><img src="images/sm_fish.gif" /></a>
+            <a href="categoryForm?categoryId=FISH"><img src="images/fish.gif" width="40"/></a>
             <img src="images/separator.gif" />
-            <a href="categoryForm?categoryId=DOGS"><img src="images/sm_dogs.gif" /></a>
+            <a href="categoryForm?categoryId=DOGS"><img src="images/dog.gif" width="40"/></a>
             <img src="images/separator.gif" />
-            <a href="categoryForm?categoryId=REPTILES"><img src="images/sm_reptiles.gif" /></a>
+            <a href="categoryForm?categoryId=REPTILES"><img src="images/reptile.gif" width="40"/></a>
             <img src="images/separator.gif" />
-            <a href="categoryForm?categoryId=CATS"><img src="images/sm_cats.gif" /></a>
+            <a href="categoryForm?categoryId=CATS"><img src="images/cat.gif" width="40"/></a>
             <img src="images/separator.gif" />
-            <a href="categoryForm?categoryId=BIRDS"><img src="images/sm_birds.gif" /></a>
+            <a href="categoryForm?categoryId=BIRDS"><img src="images/bird.gif" width="40"/></a>
         </div>
 
     </div>
