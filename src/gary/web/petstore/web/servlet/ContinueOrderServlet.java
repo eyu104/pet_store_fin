@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class ContinueOrderServlet extends HttpServlet {
     private static final String SHIP_ORDER_FORM = "/WEB-INF/jsp/order/shippingOrderForm.jsp";
-    private static final String CONFIRM_ORDER_FORM = "/WEB-INF/jsp/order/confirmOrderOrder.jsp";
+    private static final String CONFIRM_ORDER_FORM = "/WEB-INF/jsp/order/confirmOrder.jsp";
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
