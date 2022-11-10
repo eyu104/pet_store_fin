@@ -33,10 +33,12 @@ public class SignOnServlet extends HttpServlet {
         if (!validate()){
             req.setAttribute("signOnMsg",Msg);
             req.getRequestDispatcher(SIGN_ON_FORM).forward(req,resp);
-        }else if (!checkcode.equalsIgnoreCase(secode)){
+        }else{
+            if (!checkcode.equalsIgnoreCase(secode)){
                 this.Msg="验证码错误";
+                req.setAttribute("signOnMsg",Msg);
                 req.getRequestDispatcher(SIGN_ON_FORM).forward(req,resp);
-            }else {
+            }
             AccountService accountService = new AccountService();
             Account loginAccount = accountService.getAccount(username,password);
             List<String> languages = accountService.getLanguages();

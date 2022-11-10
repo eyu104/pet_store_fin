@@ -3,12 +3,15 @@ package gary.web.petstore.persistence.Impl;
 import gary.web.petstore.domain.Order;
 import gary.web.petstore.persistence.DBUtil;
 import gary.web.petstore.persistence.OrderDao;
+import gary.web.petstore.service.AccountService;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 public class OrderDaoImpl implements OrderDao {
@@ -23,16 +26,158 @@ public class OrderDaoImpl implements OrderDao {
             "      ?, ?, ?, ?, ?, ?)";
     private static final String INSERT_ORDERS_STATUS = "INSERT INTO ORDERSTATUS (ORDERID, LINENUM, TIMESTAMP, STATUS)" +
             "    VALUES (?, ?, ?, ?)";
-
+    private static final String GET_ORDERS_BY_USERNAME = "SELECT" +
+            "      BILLADDR1 AS billAddress1," +
+            "      BILLADDR2 AS billAddress2," +
+            "      BILLCITY," +
+            "      BILLCOUNTRY," +
+            "      BILLSTATE," +
+            "      BILLTOFIRSTNAME," +
+            "      BILLTOLASTNAME," +
+            "      BILLZIP,\n" +
+            "      SHIPADDR1 AS shipAddress1," +
+            "      SHIPADDR2 AS shipAddress2," +
+            "      SHIPCITY," +
+            "      SHIPCOUNTRY," +
+            "      SHIPSTATE," +
+            "      SHIPTOFIRSTNAME," +
+            "      SHIPTOLASTNAME," +
+            "      SHIPZIP," +
+            "      CARDTYPE," +
+            "      COURIER," +
+            "      CREDITCARD," +
+            "      EXPRDATE AS expiryDate," +
+            "      LOCALE," +
+            "      ORDERDATE," +
+            "      ORDERS.ORDERID," +
+            "      TOTALPRICE," +
+            "      USERID AS username," +
+            "      STATUS" +
+            "    FROM ORDERS, ORDERSTATUS" +
+            "    WHERE ORDERS.USERID = ?" +
+            "      AND ORDERS.ORDERID = ORDERSTATUS.ORDERID" +
+            "    ORDER BY ORDERDATE";
+    private static final String GET_ORDER = "select" +
+            "      BILLADDR1 AS billAddress1," +
+            "      BILLADDR2 AS billAddress2," +
+            "      BILLCITY," +
+            "      BILLCOUNTRY," +
+            "      BILLSTATE," +
+            "      BILLTOFIRSTNAME," +
+            "      BILLTOLASTNAME," +
+            "      BILLZIP," +
+            "      SHIPADDR1 AS shipAddress1," +
+            "      SHIPADDR2 AS shipAddress2," +
+            "      SHIPCITY," +
+            "      SHIPCOUNTRY," +
+            "      SHIPSTATE," +
+            "      SHIPTOFIRSTNAME," +
+            "      SHIPTOLASTNAME," +
+            "      SHIPZIP," +
+            "      CARDTYPE," +
+            "      COURIER," +
+            "      CREDITCARD," +
+            "      EXPRDATE AS expiryDate," +
+            "      LOCALE," +
+            "      ORDERDATE," +
+            "      ORDERS.ORDERID," +
+            "      TOTALPRICE," +
+            "      USERID AS username," +
+            "      STATUS" +
+            "    FROM ORDERS, ORDERSTATUS" +
+            "    WHERE ORDERS.ORDERID = ?" +
+            "      AND ORDERS.ORDERID = ORDERSTATUS.ORDERID";
 
     @Override
     public List<Order> getOrdersByUsername(String username) {
-        return null;
+        List<Order> orderList = new ArrayList<>();
+
+        try{
+            Connection connection = DBUtil.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(GET_ORDERS_BY_USERNAME);
+            preparedStatement.setString(1,username);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                Order order = new Order();
+                order.setBillAddress1(resultSet.getString(1));
+                order.setBillAddress2(resultSet.getString(2));
+                order.setBillCity(resultSet.getString(3));
+                order.setBillCountry(resultSet.getString(4));
+                order.setBillState(resultSet.getString(5));
+                order.setBillToFirstName(resultSet.getString(6));
+                order.setBillToLastName(resultSet.getString(7));
+                order.setBillZip(resultSet.getString(8));
+                order.setShipAddress1(resultSet.getString(9));
+                order.setShipAddress2(resultSet.getString(10));
+                order.setShipCity(resultSet.getString(11));
+                order.setShipCountry(resultSet.getString(12));
+                order.setShipState(resultSet.getString(13));
+                order.setShipToFirstName(resultSet.getString(14));
+                order.setShipToLastName(resultSet.getString(15));
+                order.setShipZip(resultSet.getString(16));
+                order.setCardType(resultSet.getString(17));
+                order.setCourier(resultSet.getString(18));
+                order.setCreditCard(resultSet.getString(19));
+                order.setExpiryDate(resultSet.getString(20));
+                order.setLocale(resultSet.getString(21));
+                order.setOrderDate(resultSet.getDate(22));
+                order.setOrderId(resultSet.getInt(23));
+                order.setTotalPrice(resultSet.getBigDecimal(24));
+                order.setUsername(resultSet.getString(25));
+                order.setStatus(resultSet.getString(26));
+
+                orderList.add(order);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return orderList;
     }
 
     @Override
     public Order getOrder(int orderId) {
-        return null;
+        Order order = new Order();
+        try{
+            Connection connection = DBUtil.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(GET_ORDER);
+            preparedStatement.setInt(1,orderId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()){
+                order.setBillAddress1(resultSet.getString(1));
+                order.setBillAddress2(resultSet.getString(2));
+                order.setBillCity(resultSet.getString(3));
+                order.setBillCountry(resultSet.getString(4));
+                order.setBillState(resultSet.getString(5));
+                order.setBillToFirstName(resultSet.getString(6));
+                order.setBillToLastName(resultSet.getString(7));
+                order.setBillZip(resultSet.getString(8));
+                order.setShipAddress1(resultSet.getString(9));
+                order.setShipAddress2(resultSet.getString(10));
+                order.setShipCity(resultSet.getString(11));
+                order.setShipCountry(resultSet.getString(12));
+                order.setShipState(resultSet.getString(13));
+                order.setShipToFirstName(resultSet.getString(14));
+                order.setShipToLastName(resultSet.getString(15));
+                order.setShipZip(resultSet.getString(16));
+                order.setCardType(resultSet.getString(17));
+                order.setCourier(resultSet.getString(18));
+                order.setCreditCard(resultSet.getString(19));
+                order.setExpiryDate(resultSet.getString(20));
+                order.setLocale(resultSet.getString(21));
+                order.setOrderDate(resultSet.getDate(22));
+                order.setOrderId(resultSet.getInt(23));
+                order.setTotalPrice(resultSet.getBigDecimal(24));
+                order.setUsername(resultSet.getString(25));
+                order.setStatus(resultSet.getString(26));
+            }
+
+            DBUtil.closeResultSet(resultSet);
+            DBUtil.closePreparedStatement(preparedStatement);
+            DBUtil.closeConnection(connection);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return order;
     }
 
     @Override
@@ -79,11 +224,15 @@ public class OrderDaoImpl implements OrderDao {
     @Override
     public void insertOrderStatus(Order order) {
         try{
+
+//            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//            java.util.Date d1 = sdf.parse(String.valueOf(order.getOrderDate()));
+//            java.sql.Date d2 = new java.sql.Date(d1.getTime()); //再转换为sql.Date对象
             Connection connection = DBUtil.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_ORDERS_STATUS);
             preparedStatement.setInt(1,order.getOrderId());
             preparedStatement.setInt(2,order.getOrderId());
-            preparedStatement.setDate(3, (Date) order.getOrderDate());
+            preparedStatement.setDate(3, new java.sql.Date(order.getOrderDate().getTime()));
             preparedStatement.setString(4,order.getStatus());
 
             preparedStatement.executeUpdate();
@@ -94,4 +243,16 @@ public class OrderDaoImpl implements OrderDao {
             e.printStackTrace();
         }
     }
+
+//    public static void main(String[] args) {
+//        OrderDao orderDao = new OrderDaoImpl();
+//        Order order = new Order();
+//        order.setOrderId(1);
+//        order.setOrderDate(new java.util.Date());
+//        order.setStatus("ok");
+//
+//
+//        orderDao.insertOrderStatus(order);
+//    }
+
 }
