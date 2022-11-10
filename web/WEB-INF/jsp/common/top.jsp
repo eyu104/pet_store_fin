@@ -26,19 +26,23 @@
 
         <div id="Menu">
             <div id="MenuContent">
+
                 <a href="cartForm"><img align="middle" name="img_cart" src="images/cart.gif" width="30"/></a>
                 <img align="middle" src="images/seperate.gif" width="20"/>
+
                 <c:if test="${sessionScope.loginAccount == null}">
-                    <a href="signOnForm" style="color:white"><b>Sign In</b></a>
+                    <a href="signOnForm" style="color:white;font-size: 25px"><b>Sign In</b></a>
                     <img align="middle" src="images/seperate.gif" width="20"/>
 
                 </c:if>
                 <c:if test="${sessionScope.loginAccount != null}">
                     <a href="signOff" style="color:white"><b>Sign Out</b></a>
                     <img align="middle" src="images/seperate.gif" width="20"/>
+
                     <a href="myAccount" style="color: white">My Account</a>
                     <img align="middle" src="images/seperate.gif" width="20"/>
                 </c:if>
+
                 <a href="help.html"><img align="middle" src="images/question.gif" width="35"/></a>
             </div>
         </div>
@@ -47,8 +51,8 @@
 
             <div id="SearchContent">
                 <form action="" method="post">
-                    <input type="text" name="keyword" size="14" style="background-color: white;border-color: black" >
-                    <input type="submit" value="Search" style="background-color:#FAD294DD ;border-color: white;color: white">
+                    <input type="text" name="keyword" size="15" style="background-color: white;border-color: black;height: 25px" >
+                    <input type="submit" value="Search" style="background-color:#FAD294DD ;border-color: white;color: white;height: 25px">
                 </form>
 
             </div>

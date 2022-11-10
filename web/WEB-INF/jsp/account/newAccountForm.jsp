@@ -37,21 +37,21 @@
         <td>User ID:</td>
         <td>
 <%--          <stripes:text name="username" />--%>
-          <input type="text" name="username">
+          <input type="text" name="username" style="border-radius: 5px;border-width: 1px">
         </td>
       </tr>
       <tr>
         <td>New password:</td>
         <td>
 <%--          <stripes:text name="password" />--%>
-          <input type="text" name="password">
+          <input type="text" name="password" style="border-radius: 5px;border-width: 1px">
         </td>
       </tr>
       <tr>
         <td>Repeat password:</td>
         <td>
 <%--          <stripes:text name="repeatedPassword" />--%>
-          <input type="text" name="repeatedPassword">
+          <input type="text" name="repeatedPassword" style="border-radius: 5px;border-width: 1px">
         </td>
       </tr>
     </table>
@@ -59,7 +59,7 @@
     <%@ include file="includeAccountFields.jsp"%>
 
 <%--    <stripes:submit name="newAccount" value="Save Account Information" />--%>
-    <input type="submit" name="newAccount" value="Save Account Information">
+    <input type="submit" name="newAccount" value="Save Account Information" style="border-radius: 5px;border-width: 1px;height: 30px;border-color: white" >
 
   </form>
 

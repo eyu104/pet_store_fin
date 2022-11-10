@@ -14,24 +14,25 @@
             <tr>
                 <td >Username:</td>
                 <td>
-                        <input type="text" name="username" style="border-radius: 3px;">
+                        <input type="text" name="username" style="border-radius: 5px;border-width: 1px">
                 </td>
             </tr>
             <tr>
                 <td>Password:</td>
                 <td>
-                        <input type="password" name="password" style="border-radius: 3px;">
+                        <input type="password" name="password" style="border-radius: 5px;border-width: 1px">
                 </td>
             </tr>
             <tr>
                 <td>Verification code:</td>
                 <td>
-                        <input type="text" name="secode" style="border-radius: 3px;"><img border="0" src="checkCode" onclick="this.src='checkCode?'+Math.random();">
+                        <input type="text" name="secode" style="border-radius: 5px;border-width: 1px"><br/>
+                        <img border="0" src="checkCode" onclick="this.src='checkCode?'+Math.random();">
                 </td>
             </tr>
 
         </table>
-        <input type="submit" name="signon"  value="Login" style="background-color: #eaac00;border-radius: 3px;border-color: #ccc">
+        <input type="submit" name="signon"  value="Login" style=";border-width: 1pxbackground-color: #eaac00;border-radius: 5px;border-color: #ccc;width: 100px;height: 30px;font-size: 20px">
     </form>
 
 

@@ -41,21 +41,21 @@
         <td>New password:</td>
         <td>
 <%--          <stripes:text name="password" />--%>
-          <input type="text" name="password">
+          <input type="text" name="password" style="border-radius: 5px;border-width: 1px">
         </td>
       </tr>
       <tr>
         <td>Repeat password:</td>
         <td>
 <%--          <stripes:text name="repeatedPassword" />--%>
-          <input type="text" name="repeatedPassword">
+          <input type="text" name="repeatedPassword" style=";border-width: 1px;border-radius: 5px">
         </td>
       </tr>
     </table>
     <%@ include file="includeAccountFields.jsp"%>
 
 <%--    <stripes:submit name="editAccount" value="repeatedPassword" />--%>
-    <input type="submit" name="editAccount" value="repeatedPassword">
+    <input type="submit" name="editAccount" value="repeatedPassword" style=";border-radius: 5px;border-width: 1px">
 
   </form>
 
