@@ -55,6 +55,9 @@ public class Order implements Serializable {
     }
 
     public Date getOrderDate() {
+        if (orderDate == null){
+            orderDate = new Date();
+        }
         return orderDate;
     }
 

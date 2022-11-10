@@ -1,5 +1,8 @@
 package gary.web.petstore.web.servlet;
 
+import gary.web.petstore.domain.Order;
+import gary.web.petstore.service.OrderService;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +20,16 @@ public class ConfirmOrderFormServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
+        OrderService orderService = new OrderService();
+        Order order = (Order) session.getAttribute("order");
+        orderService.insertOrder(order);
+        Boolean cartIsEmpty = true;
 
-        req.getRequestDispatcher(CONFIRM_ORDER_FORM).forward(req, resp);
+        session.removeAttribute("cart");
+        session.setAttribute("cartIsEmpty",cartIsEmpty);
+//        session.removeAttribute("items");
+//        session.removeAttribute("myList");
+//        session.invalidate();
+        req.getRequestDispatcher(CONFIRM_ORDER_FORM).forward(req,resp);
     }
 }

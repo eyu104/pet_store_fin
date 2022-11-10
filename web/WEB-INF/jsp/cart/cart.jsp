@@ -11,11 +11,11 @@
   <div id="Cart">
 
     <h2>Shopping Cart</h2>
-    <stripes:form
-            beanclass="org.mybatis.jpetstore.web.actions.CartActionBean">
+<%--    <stripes:form--%>
+<%--            beanclass="org.mybatis.jpetstore.web.actions.CartActionBean">--%>
 
 
-    </stripes:form>
+<%--    </stripes:form>--%>
 
 
     <form action="updateCart" method="post">

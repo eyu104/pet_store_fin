@@ -13,6 +13,7 @@ public class ContinueOrderServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
+
         String isShip = req.getParameter("shippingAddressRequired");
         if (isShip == null){
             req.getRequestDispatcher(CONFIRM_ORDER_FORM).forward(req,resp);
