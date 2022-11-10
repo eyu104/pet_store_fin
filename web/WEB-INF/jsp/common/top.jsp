@@ -15,7 +15,7 @@
 
 <body>
 
-<div id="Header">
+        <div id="Header">
 
         <div id="Logo">
             <div id="LogoContent">
@@ -27,26 +27,28 @@
         <div id="Menu">
             <div id="MenuContent">
                 <a href="cartForm"><img align="middle" name="img_cart" src="images/cart.gif" width="30"/></a>
-                <img align="middle" src="images/separator.gif" />
+                <img align="middle" src="images/seperate.gif" width="20"/>
                 <c:if test="${sessionScope.loginAccount == null}">
-                    <a href="signOnForm"><b>Sign In</b></a><img align="middle" src="images/separator.gif" />
+                    <a href="signOnForm" style="color:white"><b>Sign In</b></a>
+                    <img align="middle" src="images/seperate.gif" width="20"/>
+
                 </c:if>
                 <c:if test="${sessionScope.loginAccount != null}">
-                    <a href=""signOff"" style="color: white"><b>Sign Out</b></a>
-                    <img align="middle" src="images/separator.gif" />
-                    <a href="myAccount">My Account</a>
-                    <img align="middle" src="images/separator.gif" />
+                    <a href="signOff" style="color:white"><b>Sign Out</b></a>
+                    <img align="middle" src="images/seperate.gif" width="20"/>
+                    <a href="myAccount" style="color: white">My Account</a>
+                    <img align="middle" src="images/seperate.gif" width="20"/>
                 </c:if>
-                <a href="help.html"><img align="middle" src="images/question.gif" width="30"/></a>
+                <a href="help.html"><img align="middle" src="images/question.gif" width="35"/></a>
             </div>
         </div>
 
-        <div id="Search">
+        <div id="Search" style="background-color: #eaac00">
 
             <div id="SearchContent">
                 <form action="" method="post">
-                    <input type="text" name="keyword" size="14">
-                    <input type="submit" value="Search">
+                    <input type="text" name="keyword" size="14" style="background-color: white;border-color: black" >
+                    <input type="submit" value="Search" style="background-color:#FAD294DD ;border-color: white;color: white">
                 </form>
 
             </div>
@@ -54,13 +56,13 @@
 
         <div id="QuickLinks">
             <a href="categoryForm?categoryId=FISH"><img src="images/fish.gif" width="40"/></a>
-            <img src="images/separator.gif" />
+            <img src="images/sepblack.gif" width="20"/>
             <a href="categoryForm?categoryId=DOGS"><img src="images/dog.gif" width="40"/></a>
-            <img src="images/separator.gif" />
+            <img src="images/sepblack.gif" width="20"/>
             <a href="categoryForm?categoryId=REPTILES"><img src="images/reptile.gif" width="40"/></a>
-            <img src="images/separator.gif" />
+            <img src="images/sepblack.gif" width="20"/>
             <a href="categoryForm?categoryId=CATS"><img src="images/cat.gif" width="40"/></a>
-            <img src="images/separator.gif" />
+            <img src="images/sepblack.gif" width="20"/>
             <a href="categoryForm?categoryId=BIRDS"><img src="images/bird.gif" width="40"/></a>
         </div>
 

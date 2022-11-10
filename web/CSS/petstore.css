@@ -73,12 +73,12 @@ td, th {
     text-align: left;
     border-width: 0;
     border-spacing: 0;
-    background-color: #ececec
+    background-color: rgba(250, 210, 148, 0.87)
 }
 
 th {
     font-weight: bold;
-    background-color: #e2e2e2;
+    background-color: #ffffff;
 }
 
 a, a:visited, a:link {

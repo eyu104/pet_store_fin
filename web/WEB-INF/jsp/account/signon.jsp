@@ -13,7 +13,7 @@
 
         <table >
             <tr>
-                <td>Username:</td>
+                <td >Username:</td>
                 <td>
                         <input type="text" name="username">
                 </td>
