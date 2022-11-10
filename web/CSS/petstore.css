@@ -103,7 +103,7 @@ a.Button, a.Button:link, a.Button:visited {
 }
 
 a.Button:hover {
-    color: #000;
+    color: #ffffff;
     background-color: #54c07a;
     cursor:pointer;
 }
@@ -190,13 +190,30 @@ body>#Search {
     height: 9ex;
 }
 
-#Search input {
+#Search input[type="text"] {
     border-width: .1ex .1ex .1ex .1ex;
     border-style: solid;
-    border-color: #aaa;
+    border-color: #000000;
     background-color: #ffffff;
     color: #000000;
     cursor: pointer;
+    border-radius: 5px;
+    height: 25px;
+}
+
+#Search input[type="submit"] {
+    background-color: #eaac00;
+    border-color: white;
+    color: white;
+    height: 25px;
+    border-radius: 5px;
+}
+
+#Search input[type="submit"]:hover {
+    background-color:#FAD294DD ;
+    border-color: white;
+    color: white;
+    height: 25px;
     border-radius: 5px;
 }
 
@@ -296,17 +313,17 @@ body>#Banner {
 }
 
 #Catalog input[type="submit"]{
-    padding: .3ex;
+
     color: #fff;
     background-color: #eaac00;
     text-decoration: none;
     font-family: helvetica, tahoma, arial, verdana, sans-serif;
-    font-size: 1.5ex;
+    font-size: 2ex;
     border-width:0;
 }
 #Catalog input[type="submit"]:hover {
-    color: #000;
-    background-color: #eaac00;
+    color: #ffffff;
+    background-color: rgba(250, 210, 148, 0.87);
     cursor:pointer;
 }
 

@@ -53,8 +53,8 @@
 
             <div id="SearchContent">
                 <form action="" method="post">
-                    <input type="text" name="keyword" size="15" style="background-color: white;border-color: black;height: 25px" >
-                    <input type="submit" value="Search" style="background-color:#FAD294DD ;border-color: white;color: white;height: 25px">
+                    <input type="text" name="keyword" size="15" style="height: 25px"  >
+                    <input type="submit" value="Search" style="height: 25px">
                 </form>
 
             </div>

@@ -32,7 +32,7 @@
             </tr>
 
         </table>
-        <input type="submit" name="signon"  value="Login" style=";border-width: 1pxbackground-color: #eaac00;border-radius: 5px;border-color: #ccc;width: 100px;height: 30px;font-size: 20px">
+        <input type="submit" name="signon"  value="Login" style="border-width: 1px;border-radius: 5px;border-color: #ccc;width: 100px;height: 30px;font-size: 20px">
     </form>
 
 
