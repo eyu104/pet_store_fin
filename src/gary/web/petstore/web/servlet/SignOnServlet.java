@@ -18,16 +18,25 @@ public class SignOnServlet extends HttpServlet {
 
     private String username;
     private String password;
+    private String secode;
     private String Msg;
     private static final String SIGN_ON_FORM = "/WEB-INF/jsp/account/signon.jsp";
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         username = req.getParameter("username");
         password = req.getParameter("password");
+        secode= req.getParameter("secode");
+
+        HttpSession sessionsecode=req.getSession();
+        String checkcode=(String)sessionsecode.getAttribute("checkCode");
+
         if (!validate()){
             req.setAttribute("signOnMsg",Msg);
             req.getRequestDispatcher(SIGN_ON_FORM).forward(req,resp);
-        }else {
+        }else if (!checkcode.equalsIgnoreCase(secode)){
+                this.Msg="验证码错误";
+                req.getRequestDispatcher(SIGN_ON_FORM).forward(req,resp);
+            }else {
             AccountService accountService = new AccountService();
             Account loginAccount = accountService.getAccount(username,password);
             List<String> languages = accountService.getLanguages();
@@ -58,6 +67,11 @@ public class SignOnServlet extends HttpServlet {
         }
         if (this.password == null || this.password.equals("")){
             this.Msg = "密码不能为空";
+            return false;
+        }
+
+        else if(this.secode==null||this.secode.equals("")){
+            this.Msg="请输入验证码";
             return false;
         }
         return true;
