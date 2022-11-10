@@ -73,7 +73,8 @@ td, th {
     text-align: left;
     border-width: 0;
     border-spacing: 0;
-    background-color: rgba(250, 210, 148, 0.87)
+    background-color:  #ffffff;
+
 }
 
 th {
@@ -190,8 +191,9 @@ body>#Search {
     border-style: solid;
     border-color: #aaa;
     background-color: #ffffff;
-    color: #eaac00;
+    color: #000000;
     cursor: pointer;
+    border-radius: 3px;
 }
 
 #QuickLinks {
@@ -218,12 +220,12 @@ body>#Search {
 }
 
 body>#PoweredBy {
-    height: 9ex;
+    height: 4ex;
 }
 
 #Banner {
     width: 69%;
-    height: 9ex;
+    height: 4ex;
     margin: 0ex 0ex 0ex 0ex;
     padding: 0ex 0ex 0ex 0ex;
     border-width: .3ex 0ex .3ex 0px;
@@ -239,7 +241,7 @@ body>#PoweredBy {
 }
 
 body>#Banner {
-    height: 9ex;
+    height: 4ex;
 }
 
 #Content {

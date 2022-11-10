@@ -1,6 +1,5 @@
-
 <%@ include file="../common/top.jsp"%>
-
+<%@page pageEncoding="utf-8"%>
 
 <div id="BackLink">
     <a href="categoryForm?categoryId=${sessionScope.category.categoryId}">Return to ${sessionScope.category.name}</a>

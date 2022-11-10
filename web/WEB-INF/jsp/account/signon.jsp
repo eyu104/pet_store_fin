@@ -1,7 +1,6 @@
 
 <%@ include file="../common/top.jsp"%>
-
-
+<%@page pageEncoding="utf-8"%>
 <div id="Catalog">
 
 
@@ -15,24 +14,24 @@
             <tr>
                 <td >Username:</td>
                 <td>
-                        <input type="text" name="username">
+                        <input type="text" name="username" style="border-radius: 3px;">
                 </td>
             </tr>
             <tr>
                 <td>Password:</td>
                 <td>
-                        <input type="password" name="password">
+                        <input type="password" name="password" style="border-radius: 3px;">
                 </td>
             </tr>
             <tr>
                 <td>Verification code:</td>
                 <td>
-                        <input type="text" name="secode"><img border="0" src="checkCode" onclick="this.src='checkCode?'+Math.random();">
+                        <input type="text" name="secode" style="border-radius: 3px;"><img border="0" src="checkCode" onclick="this.src='checkCode?'+Math.random();">
                 </td>
             </tr>
 
         </table>
-        <input type="submit" name="signon"  value="Login" style="background-color: #eaac00">
+        <input type="submit" name="signon"  value="Login" style="background-color: #eaac00;border-radius: 3px;border-color: #ccc">
     </form>
 
 

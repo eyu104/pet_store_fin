@@ -1,4 +1,5 @@
 <%@ include file="../common/top.jsp"%>
+<%@page pageEncoding="utf-8"%>
 
 <div id="BackLink">
 <%--    <stripes:link--%>
