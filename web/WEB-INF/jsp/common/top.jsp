@@ -4,18 +4,16 @@
 
 <!DOCTYPE html>
 
-<html>
+<html >
 
 <head>
     <title>MyPetStore</title>
     <link rel="StyleSheet" href="CSS/petstore.css" type="text/css" media="screen" />
-<%--    <style>--%>
-<%--        --%>
-<%--    </style>--%>
+
 
 </head>
 
-<body>
+<body >
 
         <div id="Header">
 

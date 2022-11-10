@@ -355,8 +355,8 @@ body>#Banner {
 
 ul {
     list-style-type: none;
-    /*margin: 0;*/
-    /*padding: 0;*/
+    margin: 0;
+    padding: 0;
     background-color: rgb(255, 255, 255);
 
 }
@@ -368,7 +368,7 @@ li a {
     text-decoration: none;
     width: 230px;
     height: 30px;
-    transition: width 2s,height 2s;
+    transition: width 1s,height 1s;
 }
 
 li a:hover {

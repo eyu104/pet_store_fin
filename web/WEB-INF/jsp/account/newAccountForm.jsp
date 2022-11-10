@@ -30,7 +30,7 @@
 
 <%--</stripes:form>--%>
   <form action="newAccount?" method="post">
-    <h3>User Information</h3>
+    <h2>User Information</h1>
 
     <table>
       <tr>

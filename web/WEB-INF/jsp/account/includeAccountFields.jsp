@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page pageEncoding="utf-8"%>
 
-<h3>Account Information</h3>
+<h2>Account Information</h2>
 
 <table>
     <tr>
@@ -139,7 +139,7 @@
     </tr>
 </table>
 
-<h3>Profile Information</h3>
+<h2>Profile Information</h2>
 
 <table>
     <tr>

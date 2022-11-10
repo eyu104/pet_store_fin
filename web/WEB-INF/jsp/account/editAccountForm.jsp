@@ -30,7 +30,7 @@
 
 
   <form action="editAccount" method="post">
-    <h3>User Information</h3>
+    <h2>User Information</h2>
 
     <table>
       <tr>
