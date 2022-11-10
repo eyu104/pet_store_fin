@@ -83,14 +83,14 @@ th {
 }
 
 a, a:visited, a:link {
-    color: #039;
+    color: #eaac00;
 
     text-decoration: none;
     font-family: helvetica, tahoma, arial, verdana, sans-serif;
 }
 
 a:hover {
-    color: #69f;
+    color: rgba(250, 210, 148, 0.87);
 }
 
 a.Button, a.Button:link, a.Button:visited {
@@ -274,7 +274,7 @@ body>#Banner {
 
 #Sidebar {
     float: left;
-    background:inherit;
+    /*background:inherit;*/
     width: 30%;
 }
 
@@ -332,3 +332,22 @@ body>#Banner {
     text-align:left;
 }
 
+ul {
+    list-style-type: none;
+    /*margin: 0;*/
+    /*padding: 0;*/
+    width: 250px;
+    background-color: rgb(255, 255, 255);
+}
+
+li a {
+    display: block;
+    color: #000000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #eaac00;
+    color: white;
+}

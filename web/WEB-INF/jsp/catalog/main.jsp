@@ -9,18 +9,22 @@
 
 <div id="Main">
     <div id="Sidebar">
-        <div id="SidebarContent">
-            <a href="categoryForm?categoryId=FISH"><img src="images/fish_icon.gif" /></a><br />
-            Saltwater, Freshwater <br />
-            <a href="categoryForm?categoryId=DOGS"><img src="images/dogs_icon.gif" /></a><br />
-            Various Breeds <br />
-            <a href="categoryForm?categoryId=CATS"><img src="images/cats_icon.gif" /></a><br />
-            Various Breeds, Exotic Varieties <br />
-            <a href="categoryForm?categoryId=REPTILES"><img src="images/reptiles_icon.gif" /></a><br />
-            Lizards, Turtles, Snakes <br />
-            <a href="categoryForm?categoryId=BIRDS"><img src="images/birds_icon.gif" /></a><br />
-            Exotic Varieties
-        </div>
+<%--        <div id="SidebarContent">--%>
+
+            <ul>
+                <li><a href="categoryForm?categoryId=FISH" style="font-size: 25px"><b>Fish</b></a>
+                Saltwater, Freshwater <br /></li>
+                <li> <a href="categoryForm?categoryId=DOGS" style="font-size: 25px"><b>Dogs</b></a>
+               Various Breeds <br /></li>
+                <li><a href="categoryForm?categoryId=CATS" style="font-size: 25px"><b>Cats</b></a>
+                Various Breeds, Exotic Varieties <br /></li>
+                <li><a href="categoryForm?categoryId=REPTILES" style="font-size: 25px"><b>Reptiles</b></a>
+                Lizards, Turtles, Snakes <br /></li>
+                <li><a href="categoryForm?categoryId=BIRDS" style="font-size: 25px"><b>Birds</b></a>
+                Exotic Varieties<br/></li>
+
+            </ul>
+<%--        </div>--%>
     </div>
 
     <div id="MainImage">

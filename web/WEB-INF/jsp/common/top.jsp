@@ -9,7 +9,9 @@
 <head>
     <title>MyPetStore</title>
     <link rel="StyleSheet" href="CSS/petstore.css" type="text/css" media="screen" />
-
+<%--    <style>--%>
+<%--        --%>
+<%--    </style>--%>
 
 </head>
 
@@ -36,10 +38,10 @@
 
                 </c:if>
                 <c:if test="${sessionScope.loginAccount != null}">
-                    <a href="signOff" style="color:white"><b>Sign Out</b></a>
+                    <a href="signOff" style="color:white;font-size: 25px"><b>Sign Out</b></a>
                     <img align="middle" src="images/seperate.gif" width="20"/>
 
-                    <a href="myAccount" style="color: white">My Account</a>
+                    <a href="myAccount" style="color: white;font-size: 25px">My Account</a>
                     <img align="middle" src="images/seperate.gif" width="20"/>
                 </c:if>
 
