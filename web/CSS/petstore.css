@@ -73,13 +73,13 @@ td, th {
     text-align: left;
     border-width: 0;
     border-spacing: 0;
-    background-color:  #ffffff;
+    background-color: rgba(253, 212, 155, 0.87);
 
 }
 
 th {
     font-weight: bold;
-    background-color: #ffffff;
+    background-color: rgba(253, 212, 155, 0.87);
 }
 
 a, a:visited, a:link {
@@ -90,7 +90,7 @@ a, a:visited, a:link {
 }
 
 a:hover {
-    color: rgba(250, 210, 148, 0.87);
+    color: rgba(241, 200, 143, 0.87);
 }
 
 a.Button, a.Button:link, a.Button:visited {
@@ -106,6 +106,10 @@ a.Button:hover {
     color: #000;
     background-color: #54c07a;
     cursor:pointer;
+}
+
+input{
+    background-color: rgba(255, 241, 204, 0.74);
 }
 
 
@@ -336,18 +340,23 @@ ul {
     list-style-type: none;
     /*margin: 0;*/
     /*padding: 0;*/
-    width: 250px;
     background-color: rgb(255, 255, 255);
+
 }
 
 li a {
     display: block;
-    color: #000000;
+    color: #eaac00;
     padding: 8px 16px;
     text-decoration: none;
+    width: 230px;
+    height: 30px;
+    transition: width 2s,height 2s;
 }
 
 li a:hover {
     background-color: #eaac00;
     color: white;
+    width: 300px;
+    height: 45px;
 }
