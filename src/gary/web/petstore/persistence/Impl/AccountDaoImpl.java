@@ -1,5 +1,5 @@
 package gary.web.petstore.persistence.Impl;
-
+import org.apache.log4j.Logger;
 import gary.web.petstore.domain.Account;
 import gary.web.petstore.persistence.AccountDao;
 import gary.web.petstore.persistence.DBUtil;
@@ -7,6 +7,7 @@ import gary.web.petstore.persistence.DBUtil;
 import java.sql.*;
 
 public class AccountDaoImpl implements AccountDao {
+    Logger logger = Logger.getLogger(AccountDaoImpl.class);
 
     private static final String GET_ACCOUNT_BY_USERNAME_AND_PASSWORD = "SELECT " +
             "SIGNON.USERNAME," +
@@ -72,6 +73,7 @@ public class AccountDaoImpl implements AccountDao {
             DBUtil.closeResultSet(resultSet);
             DBUtil.closePreparedStatement(preparedStatement);
             DBUtil.closeConnection(connection);
+            logger.info(account.getUsername()+"登录");
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -121,23 +123,24 @@ public class AccountDaoImpl implements AccountDao {
 
         DBUtil.closePreparedStatement(preparedStatement);
         DBUtil.closeConnection(connection);
-
+        logger.debug(account.getUsername()+"的账户信息传入表account");
 
     }
 
     @Override
     public void insertProfile(Account account) {
         try{
-           Connection connection = DBUtil.getConnection();
-           PreparedStatement preparedStatement = connection.prepareStatement(INSERT_PROFILE);
-           preparedStatement.setString(1,account.getLanguagePreference());
-           preparedStatement.setString(2,account.getFavouriteCategoryId());
-           preparedStatement.setString(3, account.getUsername());
+            Connection connection = DBUtil.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_PROFILE);
+            preparedStatement.setString(1,account.getLanguagePreference());
+            preparedStatement.setString(2,account.getFavouriteCategoryId());
+            preparedStatement.setString(3, account.getUsername());
 
             preparedStatement.executeUpdate();
 
-           DBUtil.closePreparedStatement(preparedStatement);
-           DBUtil.closeConnection(connection);
+            DBUtil.closePreparedStatement(preparedStatement);
+            DBUtil.closeConnection(connection);
+            logger.debug(account.getUsername()+"的个人信息传入表profile");
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -154,6 +157,7 @@ public class AccountDaoImpl implements AccountDao {
             preparedStatement.executeUpdate();
             DBUtil.closePreparedStatement(preparedStatement);
             DBUtil.closeConnection(connection);
+            logger.info(account.getUsername()+"的用户名及密码传入表sion");
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -182,6 +186,8 @@ public class AccountDaoImpl implements AccountDao {
 
         DBUtil.closePreparedStatement(preparedStatement);
         DBUtil.closeConnection(connection);
+
+        logger.info(account.getUsername()+"更新了账户信息，表account中的信息已更新");
     }
 
     @Override
@@ -198,6 +204,7 @@ public class AccountDaoImpl implements AccountDao {
 
             DBUtil.closePreparedStatement(preparedStatement);
             DBUtil.closeConnection(connection);
+            logger.info(account.getUsername()+"更新了个人信息，表profile中的信息已更新");
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -215,6 +222,7 @@ public class AccountDaoImpl implements AccountDao {
 
             DBUtil.closePreparedStatement(preparedStatement);
             DBUtil.closeConnection(connection);
+            logger.info(account.getUsername()+"更新了账户信息，表sion中的信息已更新");
         }catch (Exception e){
             e.printStackTrace();
         }
