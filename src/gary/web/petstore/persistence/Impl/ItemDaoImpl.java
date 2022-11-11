@@ -29,8 +29,13 @@ public class ItemDaoImpl implements ItemDao {
             Connection connection = DBUtil.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(updateInventoryQuantityString);
 
-            String itemId = param.keySet().iterator().next();
-            Integer increment = (Integer) param.get(itemId);
+            String itemId = (String) param.get("itemId");
+
+
+
+            Integer increment =(Integer) param.get("increment");
+            System.out.println(itemId);
+            System.out.println(increment);
             preparedStatement.setInt(1,increment);
             preparedStatement.setString(2,itemId);
             preparedStatement.executeUpdate();

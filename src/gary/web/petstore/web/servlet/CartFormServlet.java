@@ -11,22 +11,19 @@ import java.io.IOException;
 
 public class CartFormServlet extends HttpServlet {
     private static final String CART_FORM = "/WEB-INF/jsp/cart/cart.jsp";
+    public static ConfirmOrderFormServlet confirmOrderFormServlet = new ConfirmOrderFormServlet();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
 
-        try {
-            Boolean cartIsEmpty = (boolean)session.getAttribute("cartIsEmpty");
-            if (cartIsEmpty == null || cartIsEmpty == false){
+        Cart cart = (Cart) session.getAttribute("cart");
 
-            }else {
-                session.setAttribute("cart",null);
-                cartIsEmpty = false;
-            }
-        }catch (NullPointerException e){
-            e.printStackTrace();
+        if (cart == null){
+            cart = new Cart();
+            session.setAttribute("cart",cart);
         }
+
 
 
         req.getRequestDispatcher(CART_FORM).forward(req,resp);

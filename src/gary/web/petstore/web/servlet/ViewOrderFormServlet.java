@@ -17,7 +17,7 @@ public class ViewOrderFormServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
-
+        session.setAttribute("cart" ,null);
         req.getRequestDispatcher(VIEW_ORDER_FORM).forward(req,resp);
     }
 }

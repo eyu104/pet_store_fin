@@ -35,6 +35,7 @@ public class OrderService {
 
     public void insertOrder(Order order) {
         order.setOrderId(getNextId("ordernum"));
+
         for (int i = 0; i < order.getLineItems().size(); i++) {
             LineItem lineItem =  order.getLineItems().get(i);
             String itemId = lineItem.getItemId();

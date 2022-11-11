@@ -1,5 +1,6 @@
 package gary.web.petstore.web.servlet;
 
+import gary.web.petstore.domain.Cart;
 import gary.web.petstore.domain.Order;
 import gary.web.petstore.service.OrderService;
 
@@ -12,6 +13,7 @@ import java.io.IOException;
 
 public class ConfirmOrderFormServlet extends HttpServlet {
     private static final String CONFIRM_ORDER_FORM = "/WEB-INF/jsp/order/confirmOrder.jsp";
+    public static Boolean  cartIsEmpty = false;
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         this.doPost(req, resp);
@@ -23,13 +25,12 @@ public class ConfirmOrderFormServlet extends HttpServlet {
         OrderService orderService = new OrderService();
         Order order = (Order) session.getAttribute("order");
         orderService.insertOrder(order);
-        Boolean cartIsEmpty = true;
 
-        session.removeAttribute("cart");
+
+
         session.setAttribute("cartIsEmpty",cartIsEmpty);
-//        session.removeAttribute("items");
-//        session.removeAttribute("myList");
-//        session.invalidate();
+        cartIsEmpty = true;
+
         req.getRequestDispatcher(CONFIRM_ORDER_FORM).forward(req,resp);
     }
 }

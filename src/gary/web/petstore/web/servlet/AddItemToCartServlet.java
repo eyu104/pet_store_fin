@@ -41,10 +41,10 @@ public class AddItemToCartServlet extends HttpServlet {
             cart.addItem(item, isInStock);
 
 
-            //解决刷新增加问题
+            //解决刷新增加问题定义√
 
         }
         session.setAttribute("cart",cart);
-        req.getRequestDispatcher(CART_FORM).forward(req,resp);
+        resp.sendRedirect("cartForm");
     }
 }
