@@ -11,8 +11,8 @@
 
     <table>
         <tr>
-            <th>Product ID</th>
-            <th>Name</th>
+            <th>产品ID</th>
+            <th>名称</th>
         </tr>
         <c:forEach var="product" items="${sessionScope.productList}">
             <tr>

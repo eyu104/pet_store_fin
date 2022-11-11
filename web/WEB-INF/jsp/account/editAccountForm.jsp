@@ -30,22 +30,22 @@
 
 
   <form action="editAccount" method="post">
-    <h2>User Information</h2>
+    <h2>用户信息</h2>
 
     <table>
       <tr>
-        <td>User ID:</td>
+        <td>用户名:</td>
         <td>${sessionScope.loginAccount.username}</td>
       </tr>
       <tr>
-        <td>New password:</td>
+        <td>新密码:</td>
         <td>
 <%--          <stripes:text name="password" />--%>
           <input type="text" name="password" style="border-radius: 5px;border-width: 1px">
         </td>
       </tr>
       <tr>
-        <td>Repeat password:</td>
+        <td>重复密码:</td>
         <td>
 <%--          <stripes:text name="repeatedPassword" />--%>
           <input type="text" name="repeatedPassword" style=";border-width: 1px;border-radius: 5px">
@@ -63,7 +63,7 @@
 <%--  <stripes:link--%>
 <%--        beanclass="org.mybatis.jpetstore.web.actions.OrderActionBean"--%>
 <%--        event="listOrders">My Orders</stripes:link>--%>
-  <a href="listOrdersForm" >My Orders</a>
+  <a href="listOrdersForm" >我的订单</a>
 </div>
 
 <%@ include file="../common/bottom.jsp"%>

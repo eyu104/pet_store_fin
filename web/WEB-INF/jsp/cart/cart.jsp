@@ -21,19 +21,19 @@
     <form action="updateCart" method="post">
       <table>
         <tr>
-          <th><b>Item ID</b></th>
-          <th><b>Product ID</b></th>
-          <th><b>Description</b></th>
-          <th><b>In Stock?</b></th>
-          <th><b>Quantity</b></th>
-          <th><b>List Price</b></th>
-          <th><b>Total Cost</b></th>
+          <th><b>商品ID</b></th>
+          <th><b>产品ID</b></th>
+          <th><b>描述</b></th>
+          <th><b>是否有现货?</b></th>
+          <th><b>数量</b></th>
+          <th><b>标价</b></th>
+          <th><b>总价</b></th>
           <th>&nbsp;</th>
         </tr>
 
         <c:if test="${sessionScope.cart.numberOfItems == 0}">
           <tr>
-            <td colspan="8"><b>Your cart is empty.</b></td>
+            <td colspan="8"><b>您的购物车是空的</b></td>
           </tr>
         </c:if>
 
@@ -71,7 +71,7 @@
 <%--              <stripes:param name="cartItem" value="${cartItem.item.itemId}" />--%>
 <%--              Remove--%>
 <%--            </stripes:link>--%>
-            <a href="removeCartItem?workingItemId=${cartItem.item.itemId}" class="Button">Remove</a>
+            <a href="removeCartItem?workingItemId=${cartItem.item.itemId}" class="Button">移除</a>
             </td>
           </tr>
         </c:forEach>
@@ -98,7 +98,7 @@
 <%--      Proceed to Checkout--%>
 <%--    </stripes:link>--%>
 
-      <a href="newOrderForm" class="Button">Proceed to Checkout</a>
+      <a href="newOrderForm" class="Button">进行结算</a>
   </c:if>
   </div>
 

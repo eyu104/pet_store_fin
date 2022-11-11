@@ -27,19 +27,19 @@
         <div id="Menu">
             <div id="MenuContent">
 
-                <a href="cartForm"><img align="middle" name="img_cart" src="images/cart.gif" width="30"/></a>
+                <a href="cartForm"><img align="middle" name="img_cart" src="images/cart.gif" width="30" /></a>
                 <img align="middle" src="images/seperate.gif" width="20"/>
 
                 <c:if test="${sessionScope.loginAccount == null}">
-                    <a href="signOnForm" style="color:white;font-size: 25px"><b>Sign In</b></a>
+                    <a href="signOnForm" style="color:white;font-size: 25px"><b>登录</b></a>
                     <img align="middle" src="images/seperate.gif" width="20"/>
 
                 </c:if>
                 <c:if test="${sessionScope.loginAccount != null}">
-                    <a href="signOff" style="color:white;font-size: 25px"><b>Sign Out</b></a>
+                    <a href="signOff" style="color:white;font-size: 25px"><b>登出</b></a>
                     <img align="middle" src="images/seperate.gif" width="20"/>
 
-                    <a href="myAccount" style="color: white;font-size: 25px">My Account</a>
+                    <a href="myAccount" style="color: white;font-size: 25px">我的账户</a>
                     <img align="middle" src="images/seperate.gif" width="20"/>
                 </c:if>
 
@@ -52,7 +52,7 @@
             <div id="SearchContent">
                 <form action="" method="post">
                     <input type="text" name="keyword" size="15" style="height: 25px"  >
-                    <input type="submit" value="Search" style="height: 25px">
+                    <input type="submit" value="搜索" style="height: 25px">
                 </form>
 
             </div>

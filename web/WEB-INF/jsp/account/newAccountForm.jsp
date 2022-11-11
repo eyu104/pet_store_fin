@@ -30,25 +30,25 @@
 
 <%--</stripes:form>--%>
   <form action="newAccount?" method="post">
-    <h2>User Information</h1>
+    <h2>用户信息</h2>
 
     <table>
       <tr>
-        <td>User ID:</td>
+        <td>用户名:</td>
         <td>
 <%--          <stripes:text name="username" />--%>
           <input type="text" name="username" style="border-radius: 5px;border-width: 1px">
         </td>
       </tr>
       <tr>
-        <td>New password:</td>
+        <td>密码:</td>
         <td>
 <%--          <stripes:text name="password" />--%>
           <input type="text" name="password" style="border-radius: 5px;border-width: 1px">
         </td>
       </tr>
       <tr>
-        <td>Repeat password:</td>
+        <td>重复密码:</td>
         <td>
 <%--          <stripes:text name="repeatedPassword" />--%>
           <input type="text" name="repeatedPassword" style="border-radius: 5px;border-width: 1px">

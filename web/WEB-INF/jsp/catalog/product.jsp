@@ -11,10 +11,10 @@
 
     <table>
         <tr>
-            <th>Item ID</th>
-            <th>Product ID</th>
-            <th>Description</th>
-            <th>List Price</th>
+            <th>商品ID</th>
+            <th>产品ID</th>
+            <th>描述</th>
+            <th>标价</th>
             <th>&nbsp;</th>
         </tr>
         <c:forEach var="item" items="${sessionScope.itemList}">
@@ -40,7 +40,7 @@
 <%--                    <stripes:param name="workingItemId" value="${item.itemId}" />--%>
 <%--                    Add to Cart--%>
 <%--                </stripes:link>--%>
-                <a href="addItemToCart?workingItemId=${item.itemId}" class="Button">Add to Cart</a>
+                <a href="addItemToCart?workingItemId=${item.itemId}" class="Button">加入购物车</a>
                 </td>
             </tr>
         </c:forEach>

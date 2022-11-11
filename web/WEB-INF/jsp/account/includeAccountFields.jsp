@@ -1,11 +1,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page pageEncoding="utf-8"%>
 
-<h2>Account Information</h2>
+<h2>详细信息</h2>
 
 <table>
     <tr>
-        <td>First name:</td>
+        <td>名:</td>
         <td>
 <%--            <stripes:text name="account.firstName" />--%>
 
@@ -18,7 +18,7 @@
         </td>
     </tr>
     <tr>
-        <td>Last name:</td>
+        <td>姓:</td>
         <td>
 <%--            <stripes:text name="account.lastName" />--%>
 
@@ -31,7 +31,7 @@
         </td>
     </tr>
     <tr>
-        <td>Email:</td>
+        <td>邮箱:</td>
         <td>
 <%--            <stripes:text size="40" name="account.email" />--%>
 
@@ -45,7 +45,7 @@
 
     </tr>
     <tr>
-        <td>Phone:</td>
+        <td>电话号码:</td>
         <td>
 <%--            <stripes:text name="account.phone" />--%>
 
@@ -58,7 +58,7 @@
         </td>
     </tr>
     <tr>
-        <td>Address 1:</td>
+        <td>地址1:</td>
         <td>
 <%--            <stripes:text size="40" name="account.address1" />--%>
 
@@ -71,7 +71,7 @@
         </td>
     </tr>
     <tr>
-        <td>Address 2:</td>
+        <td>地址2:</td>
         <td>
 <%--            <stripes:text size="40" name="account.address2" />--%>
 
@@ -84,7 +84,7 @@
         </td>
     </tr>
     <tr>
-        <td>City:</td>
+        <td>城市:</td>
         <td>
 <%--            <stripes:text name="account.city" />--%>
 
@@ -97,7 +97,7 @@
         </td>
     </tr>
     <tr>
-        <td>State:</td>
+        <td>省份:</td>
         <td>
 <%--            <stripes:text size="4" name="account.state" />--%>
 
@@ -124,7 +124,7 @@
         </td>
     </tr>
     <tr>
-        <td>Country:</td>
+        <td>国家:</td>
         <td>
 <%--            <stripes:text size="15" name="account.country" />--%>
             <c:if test="${sessionScope.loginAccount != null}">
@@ -139,11 +139,11 @@
     </tr>
 </table>
 
-<h2>Profile Information</h2>
+<h2>主页信息</h2>
 
 <table>
     <tr>
-        <td>Language Preference:</td>
+        <td>语言偏好:</td>
         <td>
 <%--            <stripes:select name="account.languagePreference">--%>
 <%--            <stripes:options-collection collection="${sessionScope.languages}" />--%>
@@ -172,7 +172,7 @@
         </td>
     </tr>
     <tr>
-        <td>Favourite Category:</td>
+        <td>收藏夹类别:</td>
         <td>
 <%--            <stripes:select name="account.favouriteCategoryId">--%>
 <%--            <stripes:options-collection collection="${sessionScope.categories}" />--%>
@@ -193,7 +193,7 @@
         </td>
     </tr>
     <tr>
-        <td>Enable MyList</td>
+        <td>启用MyList</td>
         <td>
 <%--            <stripes:checkbox name="account.listOption" />--%>
             <c:if test="${sessionScope.loginAccount != null}">
@@ -210,7 +210,7 @@
         </td>
     </tr>
     <tr>
-        <td>Enable MyBanner</td>
+        <td>启用MyBanner</td>
         <td>
 <%--            <stripes:checkbox name="account.bannerOption" />--%>
             <c:if test="${sessionScope.loginAccount != null}">

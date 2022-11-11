@@ -12,15 +12,15 @@
 <%--        <div id="SidebarContent">--%>
 
             <ul>
-                <li><a href="categoryForm?categoryId=FISH" style="font-size: 25px"><b>Fish</b></a>
+                <li><a href="categoryForm?categoryId=FISH" style="font-size: 25px"><b>宠物鱼</b></a>
                 Saltwater, Freshwater <br /></li>
-                <li> <a href="categoryForm?categoryId=DOGS" style="font-size: 25px"><b>Dogs</b></a>
+                <li> <a href="categoryForm?categoryId=DOGS" style="font-size: 25px"><b>宠物狗</b></a>
                Various Breeds <br /></li>
-                <li><a href="categoryForm?categoryId=CATS" style="font-size: 25px"><b>Cats</b></a>
+                <li><a href="categoryForm?categoryId=CATS" style="font-size: 25px"><b>宠物猫</b></a>
                 Various Breeds, Exotic Varieties <br /></li>
-                <li><a href="categoryForm?categoryId=REPTILES" style="font-size: 25px"><b>Reptiles</b></a>
+                <li><a href="categoryForm?categoryId=REPTILES" style="font-size: 25px"><b>宠物爬行类</b></a>
                 Lizards, Turtles, Snakes <br /></li>
-                <li><a href="categoryForm?categoryId=BIRDS" style="font-size: 25px"><b>Birds</b></a>
+                <li><a href="categoryForm?categoryId=BIRDS" style="font-size: 25px"><b>宠物鸟</b></a>
                 Exotic Varieties<br/></li>
 
             </ul>

@@ -31,7 +31,7 @@
         </tr>
         <tr>
             <td><c:if test="${sessionScope.item.quantity <= 0}">
-                Back ordered.
+                延期订购
             </c:if> <c:if test="${sessionScope.item.quantity > 0}">
                 ${sessionScope.item.quantity} in stock.
             </c:if></td>
@@ -51,7 +51,7 @@
 <%--                Add to Cart--%>
 <%--            </stripes:link>--%>
 
-                <a href="addItemToCart?workingItemId=${item.itemId}" class="Button">Add to Cart</a>
+                <a href="addItemToCart?workingItemId=${item.itemId}" class="Button">加入购物车</a>
             </td>
         </tr>
     </table>
