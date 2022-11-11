@@ -3,11 +3,9 @@ package gary.web.petstore.persistence.Impl;
 import gary.web.petstore.domain.Order;
 import gary.web.petstore.persistence.DBUtil;
 import gary.web.petstore.persistence.OrderDao;
-import gary.web.petstore.service.AccountService;
+import org.apache.log4j.Logger;
 
-import java.math.BigDecimal;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
@@ -15,6 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OrderDaoImpl implements OrderDao {
+
+    Logger logger = Logger.getLogger(OrderDaoImpl.class);
 
     private static final String INSERT_ORDER = "INSERT INTO ORDERS (ORDERID, USERID, ORDERDATE, SHIPADDR1, SHIPADDR2, SHIPCITY, SHIPSTATE," +
             "      SHIPZIP, SHIPCOUNTRY, BILLADDR1, BILLADDR2, BILLCITY, BILLSTATE, BILLZIP, BILLCOUNTRY," +
@@ -127,6 +127,7 @@ public class OrderDaoImpl implements OrderDao {
                 order.setStatus(resultSet.getString(26));
 
                 orderList.add(order);
+                logger.info(username+"支付了一个订单");
             }
         }catch (Exception e){
             e.printStackTrace();
@@ -216,6 +217,7 @@ public class OrderDaoImpl implements OrderDao {
 
             DBUtil.closePreparedStatement(preparedStatement);
             DBUtil.closeConnection(connection);
+            logger.debug("订单"+order.getOrderId()+"的信息已传入表order中");
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -239,6 +241,7 @@ public class OrderDaoImpl implements OrderDao {
 
             DBUtil.closePreparedStatement(preparedStatement);
             DBUtil.closeConnection(connection);
+            logger.debug("订单"+order.getOrderId()+"的状态已传入表orderstatus中");
         }catch (Exception e){
             e.printStackTrace();
         }

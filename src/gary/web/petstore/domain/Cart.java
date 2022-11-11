@@ -1,6 +1,6 @@
 package gary.web.petstore.domain;
 
-
+import org.apache.log4j.Logger;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.Map;
 
 public class Cart implements Serializable {
+    Account account=new Account();
+    Logger logger = Logger.getLogger(Cart.class);
 
     private static final long serialVersionUID = 8329559983943337176L;
     private final Map<String, CartItem> itemMap = Collections.synchronizedMap(new HashMap<String, CartItem>());
@@ -47,6 +49,9 @@ public class Cart implements Serializable {
             itemList.add(cartItem);
         }
         cartItem.incrementQuantity();
+        logger.info("添加"+item.getItemId()+"到购物车");
+
+
     }
 
     public Item removeItemById(String itemId) {
