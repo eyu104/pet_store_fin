@@ -80,7 +80,10 @@
             <fmt:formatNumber value="${sessionScope.cart.subTotal}" pattern="$#,##0.00" />
 <%--            <stripes:submit--%>
 <%--                  name="updateCartQuantities" value="Update Cart" />--%>
-            <input type="submit" value="Update Cart" style="border-radius: 5px;">
+            <c:if test="${sessionScope.cart.subTotal != 0 && sessionScope.cart != null }">
+              <input type="submit" value="Update Cart" style="border-radius: 5px;">
+            </c:if>
+
           </td>
 
 
