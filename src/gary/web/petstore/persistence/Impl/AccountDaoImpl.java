@@ -100,6 +100,7 @@ public class AccountDaoImpl implements AccountDao {
         account.setBannerOption(resultSet.getInt("bannerOption") == 1);
         account.setBannerName(resultSet.getString("bannerName"));
         return account;
+
     }
 
     @Override
@@ -123,6 +124,7 @@ public class AccountDaoImpl implements AccountDao {
 
         DBUtil.closePreparedStatement(preparedStatement);
         DBUtil.closeConnection(connection);
+        logger.info(account.getUsername()+"注册成功，成为新用户");
         logger.debug(account.getUsername()+"的账户信息传入表account");
 
     }
@@ -157,7 +159,7 @@ public class AccountDaoImpl implements AccountDao {
             preparedStatement.executeUpdate();
             DBUtil.closePreparedStatement(preparedStatement);
             DBUtil.closeConnection(connection);
-            logger.info(account.getUsername()+"的用户名及密码传入表sion");
+            logger.debug(account.getUsername()+"的用户名及密码传入表sion");
         }catch (Exception e){
             e.printStackTrace();
         }
