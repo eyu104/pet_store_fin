@@ -10,7 +10,7 @@
     <h2>${sessionScope.category.name}</h2>
 
     <table>
-        <tr>
+        <tr class="firsttr">
             <th>产品ID</th>
             <th>名称</th>
         </tr>

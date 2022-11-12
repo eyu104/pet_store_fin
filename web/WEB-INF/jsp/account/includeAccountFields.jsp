@@ -149,7 +149,7 @@
         </td>
     </tr>
     <tr>
-        <td>Zip:</td>
+        <td>邮编:</td>
         <td>
 <%--            <stripes:text size="10" name="account.zip" />--%>
 
@@ -195,11 +195,6 @@
 <%--            <stripes:options-collection collection="${sessionScope.languages}" />--%>
 <%--        </stripes:select>--%>
 
-
-
-
-
-
             <select name="account_languagePreference">
                 <c:forEach var="language" items="${sessionScope.languages}">
                     <c:if test="${sessionScope.loginAccount.languagePreference.equals(language)}">
@@ -215,12 +210,10 @@
             </select>
 
 
-
-
         </td>
     </tr>
     <tr>
-        <td>收藏夹类别:</td>
+        <td>宠物偏好:</td>
         <td>
 <%--            <stripes:select name="account.favouriteCategoryId">--%>
 <%--            <stripes:options-collection collection="${sessionScope.categories}" />--%>

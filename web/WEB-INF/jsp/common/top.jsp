@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@page pageEncoding="utf-8"%>
 
 <!DOCTYPE html>
 
@@ -39,7 +40,7 @@
                     <a href="signOff" style="color:white;font-size: 25px"><b>登出</b></a>
                     <img align="middle" src="images/seperate.gif" width="20"/>
 
-                    <a href="myAccount" style="color: white;font-size: 25px">我的账户</a>
+                    <a href="myAccount" style="color: white;font-size: 25px"><b>我的账户</b></a>
                     <img align="middle" src="images/seperate.gif" width="20"/>
                 </c:if>
 

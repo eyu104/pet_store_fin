@@ -1,5 +1,6 @@
 
 <%@ include file="../common/top.jsp"%>
+<%@page pageEncoding="utf-8"%>
 
 
 <div id="Catalog">
@@ -8,10 +9,10 @@
     <form action="continueOrder" method="post">
         <table>
             <tr>
-                <th colspan=2>Payment Details</th>
+                <th colspan=2>支付明细</th>
             </tr>
             <tr>
-                <td>Card Type:</td>
+                <td>支付卡类型:</td>
                 <td>
 <%--                    <stripes:select name="order.cardType">--%>
 <%--                    <stripes:options-collection--%>
@@ -34,27 +35,26 @@
                 </td>
             </tr>
             <tr>
-                <td>Card Number:</td>
+                <td>卡号:</td>
                 <td>
 <%--                    <stripes:text name="order.creditCard" />--%>
                     <input type="text" name="order_creditCard" value="${sessionScope.order.creditCard}">
-                    * Use a fake
-                    number!
+                    * 该卡号不存在!
                 </td>
             </tr>
             <tr>
-                <td>Expiry Date (MM/YYYY):</td>
+                <td>送达日期 (MM/YYYY):</td>
                 <td>
 <%--                    <stripes:text name="order.expiryDate" />--%>
                     <input type="text" name="order_expiryDate" value="${sessionScope.order.expiryDate}">
                 </td>
             </tr>
             <tr>
-                <th colspan=2>Billing Address</th>
+                <th colspan=2>账单地址</th>
             </tr>
 
             <tr>
-                <td>First name:</td>
+                <td>名:</td>
                 <td>
 <%--                    <stripes:text name="order.billToFirstName" />--%>
                     <input type="text" name="order_billToFirstName" value="${sessionScope.order.billToFirstName}">
@@ -62,7 +62,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Last name:</td>
+                <td>姓:</td>
                 <td>
 <%--                    <stripes:text name="order.billToLastName" />--%>
                     <input type="text" name="order_billToLastName" value="${sessionScope.order.billToLastName}">
@@ -70,7 +70,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Address 1:</td>
+                <td>地址1:</td>
                 <td>
 <%--                    <stripes:text size="40" name="order.billAddress1" />--%>
                     <input type="text" size="40" name="order_billAddress1" value="${sessionScope.order.billAddress1}">
@@ -78,7 +78,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Address 2:</td>
+                <td>地址2:</td>
                 <td>
 <%--                    <stripes:text size="40" name="order.billAddress2" />--%>
                     <input type="text" size="40" name="order_billAddress2" value="${sessionScope.order.billAddress2}">
@@ -86,14 +86,14 @@
                 </td>
             </tr>
             <tr>
-                <td>City:</td>
+                <td>城市:</td>
                 <td>
 <%--                    <stripes:text name="order.billCity" />--%>
                     <input type="text" name="order_billCity" value="${sessionScope.order.billCity}">
                 </td>
             </tr>
             <tr>
-                <td>State:</td>
+                <td>省份:</td>
                 <td>
 <%--                    <stripes:text size="4" name="order.billState" />--%>
                     <input type="text" size="4" name="order_billState" value="${sessionScope.order.billState}">
@@ -101,7 +101,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Zip:</td>
+                <td>邮编:</td>
                 <td>
                     <input type="text" size="10" name="order_billZip" value="${sessionScope.order.billZip}">
 
@@ -109,7 +109,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Country:</td>
+                <td>国家:</td>
                 <td>
 <%--                    <stripes:text size="15" name="order.billCountry" />--%>
                     <input type="text" size="15" name="order_billCountry" value="${sessionScope.order.billCountry}">
@@ -128,7 +128,7 @@
         </table>
 
 
-        <input type="submit" name="newOrder" value="Continue">
+        <input type="submit" name="newOrder" value="继续">
     </form>
 
 
