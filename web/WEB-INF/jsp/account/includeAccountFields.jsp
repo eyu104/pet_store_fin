@@ -3,7 +3,9 @@
 
 <h2>详细信息</h2>
 
-<table>
+<div class="account">
+
+<table >
     <tr>
         <td>名:</td>
         <td>
@@ -223,3 +225,5 @@
     </tr>
 
 </table>
+
+</div>

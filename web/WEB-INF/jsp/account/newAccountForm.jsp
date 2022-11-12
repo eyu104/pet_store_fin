@@ -1,7 +1,8 @@
 <%@ include file="../common/top.jsp"%>
 <%@page pageEncoding="utf-8"%>
 
-<div id="Catalog">
+<div id="Catalog" >
+    <div class="account">
 <%--  <stripes:form--%>
 <%--        beanclass="org.mybatis.jpetstore.web.actions.AccountActionBean"--%>
 <%--        focus="">--%>
@@ -32,7 +33,7 @@
   <form action="newAccount?" method="post">
     <h2>用户信息</h2>
 
-    <table>
+    <table >
       <tr>
         <td>用户名:</td>
         <td>
@@ -62,7 +63,7 @@
     <input type="submit" name="newAccount" value="保存用户信息" style="border-radius: 5px;border-width: 1px;height: 30px;border-color: white" >
 
   </form>
-
+    </div>
 </div>
 
 <%@ include file="../common/bottom.jsp"%>

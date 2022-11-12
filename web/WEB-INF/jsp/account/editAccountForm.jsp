@@ -1,7 +1,8 @@
 <%@ include file="../common/top.jsp"%>
 <%@page pageEncoding="utf-8"%>
 
-<div id="Catalog">
+<div id="Catalog" >
+    <div class="account">
 <%--  <stripes:form--%>
 <%--        beanclass="org.mybatis.jpetstore.web.actions.AccountActionBean"--%>
 <%--        focus="">--%>
@@ -32,7 +33,7 @@
   <form action="editAccount" method="post">
     <h2>用户信息</h2>
 
-    <table>
+    <table >
       <tr>
         <td>用户名:</td>
         <td>${sessionScope.loginAccount.username}</td>
@@ -64,6 +65,8 @@
 <%--        beanclass="org.mybatis.jpetstore.web.actions.OrderActionBean"--%>
 <%--        event="listOrders">My Orders</stripes:link>--%>
   <a href="listOrdersForm" >我的订单</a>
+
+    </div>
 </div>
 
 <%@ include file="../common/bottom.jsp"%>
