@@ -58,7 +58,7 @@
             </div>
         </div>
 
-        <div id="QuickLinks">
+        <div id="QuickLinks" class="quickbox">
             <a href="categoryForm?categoryId=FISH"><img src="images/fish.gif" width="40"/></a>
             <img src="images/sepblack.gif" width="20"/>
             <a href="categoryForm?categoryId=DOGS"><img src="images/dog.gif" width="40"/></a>
