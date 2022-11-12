@@ -73,6 +73,7 @@ td, th {
     text-align: left;
     border-width: 0;
     border-spacing: 0;
+
 }
 
 .firsttr{
@@ -85,7 +86,6 @@ td, th {
     background-color: #ea9800;
     color: white;
 }
-
 
 
 th {
@@ -391,7 +391,7 @@ ul {
 
 li a {
     display: block;
-    color: #ea9800;
+    color: #eaac00;
     padding: 8px 16px;
     text-decoration: none;
     width: 230px;
@@ -400,7 +400,7 @@ li a {
 }
 
 li a:hover {
-    background-color: #ea9800;
+    background-color: #eaac00;
     color: white;
     width: 300px;
     height: 45px;

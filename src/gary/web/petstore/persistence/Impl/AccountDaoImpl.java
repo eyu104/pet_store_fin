@@ -40,8 +40,8 @@ public class AccountDaoImpl implements AccountDao {
             " (EMAIL, FIRSTNAME, LASTNAME, STATUS, ADDR1, ADDR2, CITY, STATE, ZIP, COUNTRY, PHONE, USERID)" +
             " VALUES" +
             " (?, ?, ?, ?, ?,  ?, ?, ?, ?, ?, ?, ?)";
-    private static final String INSERT_PROFILE = "INSERT INTO PROFILE (LANGPREF, FAVCATEGORY, USERID)" +
-            "    VALUES (?, ?, ?)";
+    private static final String INSERT_PROFILE = "INSERT INTO PROFILE (LANGPREF, FAVCATEGORY, USERID, MYLISTOPT, BANNEROPT)" +
+            "    VALUES (?, ?, ?, ?, ?)";
     private static final String INSERT_SIGNON = "INSERT INTO SIGNON (PASSWORD,USERNAME)" +
             "    VALUES (?, ?)";
 
@@ -50,7 +50,9 @@ public class AccountDaoImpl implements AccountDao {
 
     private static final String UPDATE_PROFILE = "UPDATE PROFILE SET" +
             "      LANGPREF = ?," +
-            "      FAVCATEGORY = ?" +
+            "      FAVCATEGORY = ?," +
+            "      MYLISTOPT =?," +
+            "      BANNEROPT =?" +
             "    WHERE USERID = ?";
 
     @Override
@@ -133,9 +135,25 @@ public class AccountDaoImpl implements AccountDao {
     public void insertProfile(Account account) {
         try{
             Connection connection = DBUtil.getConnection();
+            int mylist ,banner;
+            if (account.isListOption())
+            {
+                mylist = 1;
+            }else {
+                mylist = 0;
+            }
+
+            if (account.isBannerOption()){
+                banner = 1;
+            }else {
+                banner = 0;
+            }
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_PROFILE);
             preparedStatement.setString(1,account.getLanguagePreference());
             preparedStatement.setString(2,account.getFavouriteCategoryId());
+            preparedStatement.setInt(4,mylist);
+            preparedStatement.setInt(5,banner);
+
             preparedStatement.setString(3, account.getUsername());
 
             preparedStatement.executeUpdate();
@@ -196,11 +214,27 @@ public class AccountDaoImpl implements AccountDao {
     public void updateProfile(Account account) {
 
         try {
+
+            int mylist ,banner;
+            if (account.isListOption())
+            {
+                mylist = 1;
+            }else {
+                mylist = 0;
+            }
+
+            if (account.isBannerOption()){
+                banner = 1;
+            }else {
+                banner = 0;
+            }
             Connection connection = DBUtil.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_PROFILE);
             preparedStatement.setString(1,account.getLanguagePreference());
             preparedStatement.setString(2,account.getFavouriteCategoryId());
-            preparedStatement.setString(3,account.getUsername());
+            preparedStatement.setInt(3,mylist);
+            preparedStatement.setInt(4,banner);
+            preparedStatement.setString(5, account.getUsername());
 
             preparedStatement.executeUpdate();
 

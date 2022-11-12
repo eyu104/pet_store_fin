@@ -27,6 +27,7 @@ public class AccountService {
         List<String> langList = new ArrayList<String>();
         langList.add("english");
         langList.add("japanese");
+        langList.add("中文");
         LANGUAGE_LIST = Collections.unmodifiableList(langList);
 
         List<String> catList = new ArrayList<String>();
