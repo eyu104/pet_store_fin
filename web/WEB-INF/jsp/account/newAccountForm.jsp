@@ -36,8 +36,14 @@
       <tr>
         <td>用户名:</td>
         <td>
+            <c:if test="${sessionScope.newAccount != null}">
+                <input type="text" name="username" style="border-radius: 5px;border-width: 1px" value="${sessionScope.newAccount.username}">
+            </c:if>
+            <c:if test="${sessionScope.newAccount == null}">
+                <input type="text" name="username" style="border-radius: 5px;border-width: 1px">
+            </c:if>
 <%--          <stripes:text name="username" />--%>
-          <input type="text" name="username" style="border-radius: 5px;border-width: 1px">
+
         </td>
       </tr>
       <tr>
@@ -55,7 +61,9 @@
         </td>
       </tr>
     </table>
-
+      <c:if test="${sessionScope.Msg != null}">
+          <p><font color="red">${sessionScope.Msg}</font></p>
+      </c:if>
     <%@ include file="includeAccountFields.jsp"%>
 
 <%--    <stripes:submit name="newAccount" value="Save Account Information" />--%>

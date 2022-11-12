@@ -61,7 +61,6 @@ public class NewAccountServlet extends HttpServlet {
         newAccount.setUsername(username);
         newAccount.setFirstName(account_firstName);
         newAccount.setLastName(account_lastName);
-        newAccount.setPassword(password);
         newAccount.setAddress1(account_address1);
         newAccount.setAddress2(account_address2);
         newAccount.setEmail(account_email);
@@ -85,18 +84,28 @@ public class NewAccountServlet extends HttpServlet {
         }
         newAccount.setListOption(account_listOption);
         newAccount.setBannerOption(account_bannerOption);
+        if(!validate()){
+            session.setAttribute("Msg",Msg);
+            session.setAttribute("newAccount",newAccount);
+            req.getRequestDispatcher("newAccountForm").forward(req,resp);
+        }else {
+            newAccount.setPassword(password);
+            try {
+                accountService.insertAccount(newAccount);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            session.setAttribute("newAccount",null);
+            resp.sendRedirect("mainForm");
+        }
 
 //        System.out.println(account_languagePreference);
 //        System.out.println(account_favouriteCategoryId);
-        try {
-            accountService.insertAccount(newAccount);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        resp.sendRedirect("mainForm");
+
     }
 
     private boolean validate(){
+
 
 
         if (this.username == null || this.username.equals("")){
@@ -105,6 +114,10 @@ public class NewAccountServlet extends HttpServlet {
         }
         if (this.password == null || this.password.equals("")){
             this.Msg = "密码不能为空";
+            return false;
+        }
+        if(!this.password.equals(this.repeatedPassword)){
+            this.Msg = "两次输入密码不相同";
             return false;
         }
         return true;

@@ -12,8 +12,12 @@
             <c:if test="${sessionScope.loginAccount != null}">
                 <input type="text" name="account_firstName" value="${sessionScope.loginAccount.firstName}" style="border-radius: 5px;border-width: 1px">
             </c:if>
-            <c:if test="${sessionScope.loginAccount == null}">
+            <c:if test="${sessionScope.loginAccount == null && sessionScope.newAccount ==null}">
                 <input type="text" name="account_firstName" style="border-radius: 5px;border-width: 1px">
+            </c:if>
+
+            <c:if test="${sessionScope.newAccount != null}">
+                <input type="text" name="account_firstName" style="border-radius: 5px;border-width: 1px" value="${sessionScope.newAccount.firstName}">
             </c:if>
         </td>
     </tr>
@@ -25,9 +29,14 @@
             <c:if test="${sessionScope.loginAccount != null}">
                 <input type="text" name="account_lastName" value="${sessionScope.loginAccount.lastName}" style="border-radius: 5px;border-width: 1px">
             </c:if>
-            <c:if test="${sessionScope.loginAccount == null}">
+    <c:if test="${sessionScope.loginAccount == null && sessionScope.newAccount ==null}">
                 <input type="text" name="account_lastName" style="border-radius: 5px;border-width: 1px">
             </c:if>
+
+            <c:if test="${sessionScope.newAccount != null}">
+                <input type="text" name="account_lastName" value="${sessionScope.newAccount.lastName}" style="border-radius: 5px;border-width: 1px">
+            </c:if>
+
         </td>
     </tr>
     <tr>
@@ -38,9 +47,14 @@
             <c:if test="${sessionScope.loginAccount != null}">
                 <input type="text" size="40" name="account_email" value="${sessionScope.loginAccount.email}" style="border-radius: 5px;border-width: 1px">
             </c:if>
-            <c:if test="${sessionScope.loginAccount == null}">
+    <c:if test="${sessionScope.loginAccount == null && sessionScope.newAccount ==null}">
                 <input type="text" size="40" name="account_email" style="border-radius: 5px;border-width: 1px">
             </c:if>
+
+            <c:if test="${sessionScope.newAccount != null}">
+                <input type="text" size="40" name="account_email" value="${sessionScope.newAccount.email}" style="border-radius: 5px;border-width: 1px">
+            </c:if>
+
         </td>
 
     </tr>
@@ -52,9 +66,14 @@
             <c:if test="${sessionScope.loginAccount != null}">
                 <input type="text" name="account_phone" value="${sessionScope.loginAccount.phone}" style="border-radius: 5px;border-width: 1px">
             </c:if>
-            <c:if test="${sessionScope.loginAccount == null}" >
+    <c:if test="${sessionScope.loginAccount == null && sessionScope.newAccount ==null}">
                 <input type="text" name="account_phone" style="border-radius: 5px;border-width: 1px">
             </c:if>
+
+            <c:if test="${sessionScope.newAccount != null}">
+                <input type="text" name="account_phone" value="${sessionScope.newAccount.phone}" style="border-radius: 5px;border-width: 1px">
+            </c:if>
+
         </td>
     </tr>
     <tr>
@@ -65,9 +84,14 @@
             <c:if test="${sessionScope.loginAccount != null}">
                 <input type="text" size="40" name="account_address1" value="${sessionScope.loginAccount.address1}" style="border-radius: 5px;border-width: 1px">
             </c:if>
-            <c:if test="${sessionScope.loginAccount == null}">
+    <c:if test="${sessionScope.loginAccount == null && sessionScope.newAccount ==null}">
                 <input type="text" size="40" name="account_address1" style="border-radius: 5px;border-width: 1px">
             </c:if>
+
+            <c:if test="${sessionScope.newAccount != null}">
+                <input type="text" size="40" name="account_address1" value="${sessionScope.newAccount.address1}" style="border-radius: 5px;border-width: 1px">
+            </c:if>
+
         </td>
     </tr>
     <tr>
@@ -78,9 +102,14 @@
             <c:if test="${sessionScope.loginAccount != null}">
                 <input type="text" size="40" name="account_address2" value="${sessionScope.loginAccount.address2}" style="border-radius: 5px;border-width: 1px">
             </c:if>
-            <c:if test="${sessionScope.loginAccount == null}">
+    <c:if test="${sessionScope.loginAccount == null && sessionScope.newAccount ==null}">
                 <input type="text" size="40" name="account_address2" style="border-radius: 5px;border-width: 1px">
             </c:if>
+
+            <c:if test="${sessionScope.newAccount != null}">
+                <input type="text" size="40" name="account_address2" value="${sessionScope.newAccount.address2}" style="border-radius: 5px;border-width: 1px">
+            </c:if>
+
         </td>
     </tr>
     <tr>
@@ -91,9 +120,14 @@
             <c:if test="${sessionScope.loginAccount != null}">
                 <input type="text" name="account_city" value="${sessionScope.loginAccount.city}" style="border-radius: 5px;border-width: 1px">
             </c:if>
-            <c:if test="${sessionScope.loginAccount == null}" >
+    <c:if test="${sessionScope.loginAccount == null && sessionScope.newAccount ==null}">
                 <input type="text" name="account_city" style="border-radius: 5px;border-width: 1px">
             </c:if>
+
+            <c:if test="${sessionScope.newAccount != null}">
+                <input type="text" name="account_city" value="${sessionScope.newAccount.city}" style="border-radius: 5px;border-width: 1px">
+            </c:if>
+
         </td>
     </tr>
     <tr>
@@ -104,9 +138,14 @@
             <c:if test="${sessionScope.loginAccount != null}" >
                 <input type="text" size="4" name="account_state" value="${sessionScope.loginAccount.state}" style="border-radius: 5px;border-width: 1px">
             </c:if>
-            <c:if test="${sessionScope.loginAccount == null}">
+    <c:if test="${sessionScope.loginAccount == null && sessionScope.newAccount ==null}">
                 <input type="text" size="4" name="account_state" style="border-radius: 5px;border-width: 1px">
             </c:if>
+
+            <c:if test="${sessionScope.newAccount != null}">
+                <input type="text" size="4" name="account_state" value="${sessionScope.newAccount.state}" style="border-radius: 5px;border-width: 1px">
+            </c:if>
+
         </td>
     </tr>
     <tr>
@@ -118,8 +157,12 @@
             <c:if test="${sessionScope.loginAccount != null}">
                 <input type="text" size="10" name="account_zip" value="${sessionScope.loginAccount.zip}" style="border-radius: 5px;border-width: 1px">
             </c:if>
-            <c:if test="${sessionScope.loginAccount == null}">
+    <c:if test="${sessionScope.loginAccount == null && sessionScope.newAccount ==null}">
                 <input type="text" size="10" name="account_zip" style="border-radius: 5px;border-width: 1px">
+            </c:if>
+
+            <c:if test="${sessionScope.newAccount != null}">
+                <input type="text" size="10" name="account_zip" value="${sessionScope.newAccount.zip}" style="border-radius: 5px;border-width: 1px">
             </c:if>
         </td>
     </tr>
@@ -130,10 +173,13 @@
             <c:if test="${sessionScope.loginAccount != null}">
                 <input type="text" size="15" name="account_country" value="${sessionScope.loginAccount.country}" style="border-radius: 5px;border-width: 1px">
             </c:if>
-            <c:if test="${sessionScope.loginAccount == null}">
+    <c:if test="${sessionScope.loginAccount == null && sessionScope.newAccount ==null}">
                 <input type="text" size="15" name="account_country" style="border-radius: 5px;border-width: 1px">
             </c:if>
 
+            <c:if test="${sessionScope.newAccount != null}">
+                <input type="text" size="15" name="account_country" value="${sessionScope.newAccount.country}" style="border-radius: 5px;border-width: 1px">
+            </c:if>
 
         </td>
     </tr>
@@ -163,6 +209,8 @@
                         <option name="account_languagePreference" value="${language}" >${language}</option>
                     </c:if>
 
+
+
                 </c:forEach>
             </select>
 
@@ -187,6 +235,9 @@
                         <option name="account_favouriteCategoryId" value="${category}">${category}</option>
                     </c:if>
 
+
+
+
                 </c:forEach>
             </select>
 
@@ -204,9 +255,19 @@
                     <input type="checkbox"  name="account_listOption">
                 </c:if>
             </c:if>
-            <c:if test="${sessionScope.loginAccount == null}">
+    <c:if test="${sessionScope.loginAccount == null && sessionScope.newAccount ==null}">
                 <input type="checkbox" name="account_listOption">
             </c:if>
+
+            <c:if test="${sessionScope.newAccount != null}">
+                <c:if test="${sessionScope.newAccount.listOption == true}">
+                    <input type="checkbox" checked="checked" name="account_listOption">
+                </c:if>
+                <c:if test="${sessionScope.newAccount.listOption != true}">
+                    <input type="checkbox"  name="account_listOption">
+                </c:if>
+            </c:if>
+
         </td>
     </tr>
     <tr>
@@ -221,9 +282,19 @@
                     <input type="checkbox"  name="account_bannerOption">
                 </c:if>
             </c:if>
-            <c:if test="${sessionScope.loginAccount == null}">
+            <c:if test="${sessionScope.loginAccount == null && sessionScope.newAccount ==null}">
                 <input type="checkbox" name="account_bannerOption">
             </c:if>
+
+            <c:if test="${sessionScope.newAccount != null}">
+                <c:if test="${sessionScope.newAccount.bannerOption == true}">
+                    <input type="checkbox" checked="checked" name="account_bannerOption">
+                </c:if>
+                <c:if test="${sessionScope.newAccount.bannerOption != true}">
+                    <input type="checkbox"  name="account_bannerOption">
+                </c:if>
+            </c:if>
+
 
 
         </td>
