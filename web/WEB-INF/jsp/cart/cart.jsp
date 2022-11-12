@@ -10,7 +10,7 @@
 
   <div id="Cart">
 
-    <h2>Shopping Cart</h2>
+    <h2>购物车</h2>
 <%--    <stripes:form--%>
 <%--            beanclass="org.mybatis.jpetstore.web.actions.CartActionBean">--%>
 
@@ -20,7 +20,7 @@
 
     <form action="updateCart" method="post">
       <table>
-        <tr>
+        <tr class="firsttr">
           <th><b>商品ID</b></th>
           <th><b>产品ID</b></th>
           <th><b>描述</b></th>
@@ -76,12 +76,12 @@
           </tr>
         </c:forEach>
         <tr>
-          <td colspan="7">Sub Total:
+          <td colspan="7">总价:
             <fmt:formatNumber value="${sessionScope.cart.subTotal}" pattern="$#,##0.00" />
 <%--            <stripes:submit--%>
 <%--                  name="updateCartQuantities" value="Update Cart" />--%>
             <c:if test="${sessionScope.cart.subTotal != 0 && sessionScope.cart != null }">
-              <input type="submit" value="Update Cart" style="border-radius: 5px;">
+              <input type="submit" value="更新购物车" style="border-radius: 5px;">
             </c:if>
 
           </td>

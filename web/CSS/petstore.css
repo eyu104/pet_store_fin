@@ -77,6 +77,18 @@ td, th {
 
 }
 
+.firsttr{
+    empty-cells: show;
+    padding: .3ex .3ex;
+    vertical-align: top;
+    text-align: center;
+    border-width: 0;
+    border-spacing: 0;
+    background-color: #ea9800;
+    color: white;
+
+}
+
 th {
     font-weight: bold;
     background-color: rgba(253, 212, 155, 0.87);
@@ -96,15 +108,16 @@ a:hover {
 a.Button, a.Button:link, a.Button:visited {
     padding: .3ex;
     color: #fff;
-    background-color: #005e21;
+    background-color: #eaac00;
     text-decoration: none;
     font-family: helvetica, tahoma, arial, verdana, sans-serif;
     font-size: 1.5ex;
+    border-radius: 5px;
 }
 
 a.Button:hover {
     color: #ffffff;
-    background-color: #54c07a;
+    background-color: rgba(241, 200, 143, 0.87);
     cursor:pointer;
 }
 
@@ -164,8 +177,7 @@ body>#Menu {
     height: 9ex;
 }
 
-{
-}
+
 
 #Search {
     width: 33%;
@@ -408,6 +420,8 @@ li a:hover {
 }
 
 .loginbox input[type="text"]:focus,.loginbox input[type="password"]:focus {
-    width:280px;
+    width: 280px;
     border-color: #eaac00;
 }
+
+

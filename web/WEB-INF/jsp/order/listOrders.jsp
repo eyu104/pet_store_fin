@@ -1,12 +1,13 @@
 <%@ include file="../common/top.jsp"%>
+<%@page pageEncoding="utf-8"%>
 
-<h2>My Orders</h2>
+<h2>我的订单</h2>
 
 <table>
     <tr>
-        <th>Order ID</th>
-        <th>Date</th>
-        <th>Total Price</th>
+        <th>订单ID</th>
+        <th>日期</th>
+        <th>总价</th>
     </tr>
 
     <c:forEach var="order" items="${sessionScope.orderList}">
