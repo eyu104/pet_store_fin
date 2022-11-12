@@ -8,7 +8,7 @@
     <form action="confirmOrderForm" method="post">
         <table>
             <tr>
-                <th colspan=2>航运地址</th>
+                <th colspan=2>收货地址</th>
             </tr>
 
             <tr>

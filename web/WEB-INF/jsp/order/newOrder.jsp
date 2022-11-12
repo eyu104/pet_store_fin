@@ -39,7 +39,6 @@
                 <td>
 <%--                    <stripes:text name="order.creditCard" />--%>
                     <input type="text" name="order_creditCard" value="${sessionScope.order.creditCard}">
-                    * 该卡号不存在!
                 </td>
             </tr>
             <tr>

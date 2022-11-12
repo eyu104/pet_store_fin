@@ -1,4 +1,5 @@
 <%@ include file="../common/top.jsp"%>
+<%@page pageEncoding="utf-8"%>
 
 <div id="BackLink">
     <a href="" >Return to Main Menu</a>
@@ -13,107 +14,106 @@
                                 pattern="yyyy/MM/dd hh:mm:ss" /></th>
         </tr>
         <tr>
-            <th colspan="2">Payment Details</th>
+            <th colspan="2">支付明细</th>
         </tr>
         <tr>
-            <td>Card Type:</td>
+            <td>支付卡类型:</td>
             <td><c:out value="${sessionScope.order.cardType}" /></td>
         </tr>
         <tr>
-            <td>Card Number:</td>
-            <td><c:out value="${sessionScope.order.creditCard}" /> * Fake
-                number!</td>
+            <td>卡号:</td>
+            <td><c:out value="${sessionScope.order.creditCard}" /> </td>
         </tr>
         <tr>
-            <td>Expiry Date (MM/YYYY):</td>
+            <td>送达日期(MM/YYYY):</td>
             <td><c:out value="${sessionScope.order.expiryDate}" /></td>
         </tr>
         <tr>
-            <th colspan="2">Billing Address</th>
+            <th colspan="2">账单地址</th>
         </tr>
         <tr>
-            <td>First name:</td>
+            <td>名:</td>
             <td><c:out value="${sessionScope.order.billToFirstName}" /></td>
         </tr>
         <tr>
-            <td>Last name:</td>
+            <td>姓:</td>
             <td><c:out value="${sessionScope.order.billToLastName}" /></td>
         </tr>
         <tr>
-            <td>Address 1:</td>
+            <td>地址1:</td>
             <td><c:out value="${sessionScope.order.billAddress1}" /></td>
         </tr>
         <tr>
-            <td>Address 2:</td>
+            <td>地址2:</td>
             <td><c:out value="${sessionScope.order.billAddress2}" /></td>
         </tr>
         <tr>
-            <td>City:</td>
+            <td>城市:</td>
             <td><c:out value="${sessionScope.order.billCity}" /></td>
         </tr>
         <tr>
-            <td>State:</td>
+            <td>省份:</td>
             <td><c:out value="${sessionScope.order.billState}" /></td>
         </tr>
         <tr>
-            <td>Zip:</td>
+            <td>邮编:</td>
             <td><c:out value="${sessionScope.order.billZip}" /></td>
         </tr>
         <tr>
-            <td>Country:</td>
+            <td>国家:</td>
             <td><c:out value="${sessionScope.order.billCountry}" /></td>
         </tr>
         <tr>
-            <th colspan="2">Shipping Address</th>
+            <th colspan="2">收货地址</th>
         </tr>
         <tr>
-            <td>First name:</td>
+            <td>名:</td>
             <td><c:out value="${sessionScope.order.shipToFirstName}" /></td>
         </tr>
         <tr>
-            <td>Last name:</td>
+            <td>姓:</td>
             <td><c:out value="${sessionScope.order.shipToLastName}" /></td>
         </tr>
         <tr>
-            <td>Address 1:</td>
+            <td>地址1:</td>
             <td><c:out value="${sessionScope.order.shipAddress1}" /></td>
         </tr>
         <tr>
-            <td>Address 2:</td>
+            <td>地址2:</td>
             <td><c:out value="${sessionScope.order.shipAddress2}" /></td>
         </tr>
         <tr>
-            <td>City:</td>
+            <td>城市:</td>
             <td><c:out value="${sessionScope.order.shipCity}" /></td>
         </tr>
         <tr>
-            <td>State:</td>
+            <td>省份:</td>
             <td><c:out value="${sessionScope.order.shipState}" /></td>
         </tr>
         <tr>
-            <td>Zip:</td>
+            <td>邮编:</td>
             <td><c:out value="${sessionScope.order.shipZip}" /></td>
         </tr>
         <tr>
-            <td>Country:</td>
+            <td>国家:</td>
             <td><c:out value="${sessionScope.order.shipCountry}" /></td>
         </tr>
         <tr>
-            <td>Courier:</td>
+            <td>快递公司:</td>
             <td><c:out value="${sessionScope.order.courier}" /></td>
         </tr>
         <tr>
-            <td colspan="2">Status: <c:out value="${sessionScope.order.status}" /></td>
+            <td colspan="2">进度: <c:out value="${sessionScope.order.status}" /></td>
         </tr>
         <tr>
             <td colspan="2">
                 <table>
                     <tr>
-                        <th>Item ID</th>
-                        <th>Description</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Total Cost</th>
+                        <th>产品ID</th>
+                        <th>描述</th>
+                        <th>数量</th>
+                        <th>价格</th>
+                        <th>总价</th>
                     </tr>
                     <c:forEach var="lineItem" items="${sessionScope.order.lineItems}">
                         <tr>
@@ -149,7 +149,7 @@
                         </tr>
                     </c:forEach>
                     <tr>
-                        <th colspan="5">Total: <fmt:formatNumber
+                        <th colspan="5">总价: <fmt:formatNumber
                                 value="${sessionScope.order.totalPrice}" pattern="$#,##0.00" /></th>
                     </tr>
                 </table>
