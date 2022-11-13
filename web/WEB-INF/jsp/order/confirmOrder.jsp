@@ -98,7 +98,7 @@
 <%--        <stripes:param name="confirmed" value="true" />--%>
 <%--        Confirm--%>
 <%--    </stripes:link>--%>
-    <a href="viewOrderForm" class="Button">
+    <a href="confirmOrderForm" class="Button">
     <%--    event="newOrder--%>
        确认
     </a>

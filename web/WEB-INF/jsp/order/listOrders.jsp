@@ -21,7 +21,7 @@
 <%--            </stripes:link>--%>
 
 <%--                event="viewOrder"--%>
-                <a href="">${order.orderId}</a>
+                <a href="viewOrderForm?orderId=${order.orderId}">${order.orderId}</a>
 
             </td>
             <td>

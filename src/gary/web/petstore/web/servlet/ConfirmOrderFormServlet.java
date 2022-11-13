@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class ConfirmOrderFormServlet extends HttpServlet {
-    private static final String CONFIRM_ORDER_FORM = "/WEB-INF/jsp/order/confirmOrder.jsp";
+    private static final String CONFIRM_ORDER_FORM = "/WEB-INF/jsp/order/viewOrder.jsp";
     public static Boolean  cartIsEmpty = false;
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -30,7 +30,7 @@ public class ConfirmOrderFormServlet extends HttpServlet {
 
         session.setAttribute("cartIsEmpty",cartIsEmpty);
         cartIsEmpty = true;
-
+        session.setAttribute("cart" ,null);
         req.getRequestDispatcher(CONFIRM_ORDER_FORM).forward(req,resp);
     }
 }

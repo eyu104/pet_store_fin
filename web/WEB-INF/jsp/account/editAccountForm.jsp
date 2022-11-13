@@ -56,7 +56,7 @@
     <%@ include file="includeAccountFields.jsp"%>
 
 <%--    <stripes:submit name="editAccount" value="repeatedPassword" />--%>
-    <input type="submit" name="editAccount" value="repeatedPassword" style=";border-radius: 5px;border-width: 1px">
+    <input type="submit" name="editAccount" value="更新信息" style=";border-radius: 5px;border-width: 1px">
 
   </form>
 

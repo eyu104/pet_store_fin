@@ -133,7 +133,7 @@ public class OrderDaoImpl implements OrderDao {
                 order.setStatus(resultSet.getString(26));
 
                 orderList.add(order);
-                logger.info(username+"支付了一个订单");
+                logger.info(username+"查看了一个订单");
             }
         }catch (Exception e){
             e.printStackTrace();
