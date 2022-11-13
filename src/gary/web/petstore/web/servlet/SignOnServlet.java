@@ -27,7 +27,7 @@ public class SignOnServlet extends HttpServlet {
         password = req.getParameter("password");
         secode= req.getParameter("secode");
 
-        HttpSession sessionsecode=req.getSession();
+        HttpSession sessionsecode = req.getSession();
         String checkcode=(String)sessionsecode.getAttribute("checkCode");
 
         if (!validate()){

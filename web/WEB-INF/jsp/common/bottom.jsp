@@ -9,7 +9,7 @@
         <!-- 登录用户的banner -->
         <c:if test="${sessionScope.loginAccount != null }">
 
-                <c:if test="${sessionScope.loginAccount.bannerOption}">
+                <c:if test="${sessionScope.loginAccount.bannerOption == true}">
                     ${sessionScope.loginAccount.bannerName}
                 </c:if>
         </c:if>

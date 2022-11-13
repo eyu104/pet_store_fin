@@ -1,7 +1,9 @@
 package gary.web.petstore.web.servlet;
 
 import gary.web.petstore.domain.Account;
+import gary.web.petstore.domain.Product;
 import gary.web.petstore.service.AccountService;
+import gary.web.petstore.service.CatalogService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -9,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 
 public class EditAccountServlet extends HttpServlet {
     private String username;
@@ -29,13 +32,14 @@ public class EditAccountServlet extends HttpServlet {
     private boolean account_bannerOption;
     private boolean account_listOption;
     private String Msg;
-    private Account newAccount = new Account();
+
     private AccountService accountService = new AccountService();
     private static final String MY_ACCOUNT_FORM = "/WEB-INF/jsp/account/editAccountForm.jsp";
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
-        Account tem =(Account)session.getAttribute("loginAccount");
+         Account newAccount = (Account) session.getAttribute("loginAccount");
+        Account tem = (Account) session.getAttribute("loginAccount");
         username = tem.getUsername();
         password = req.getParameter("password");
         repeatedPassword = req.getParameter("repeatedPassword");
@@ -69,28 +73,36 @@ public class EditAccountServlet extends HttpServlet {
         newAccount.setCountry(account_country);
         newAccount.setFavouriteCategoryId(account_favouriteCategoryId);
         newAccount.setLanguagePreference(account_languagePreference);
-        if (bannerOption == null){
+        if (bannerOption == null) {
             account_bannerOption = false;
-        }else if (bannerOption.equals("on")){
+        } else if (bannerOption.equals("on")) {
             account_bannerOption = true;
         }
-        if (listOption == null){
+        if (listOption == null) {
             account_listOption = false;
-        }else if (listOption.equals("on")){
+        } else if (listOption.equals("on")) {
             account_listOption = true;
         }
         newAccount.setListOption(account_listOption);
         newAccount.setBannerOption(account_bannerOption);
         try {
             accountService.updateAccount(newAccount);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        session.setAttribute("loginAccount",newAccount);
-        req.getRequestDispatcher("myAccount").forward(req,resp);
+
+
+        if (newAccount.isListOption()) {
+            CatalogService catalogService = new CatalogService();
+            List<Product> myList = catalogService.getProductListByCategory(newAccount.getFavouriteCategoryId());
+            session.setAttribute("myList", myList);
+            session.setAttribute("loginAccount", newAccount);
+//        req.getRequestDispatcher(MY_ACCOUNT_FORM).forward(req,resp);
+
+        }
+        session.setAttribute("loginAccount", newAccount);
+        resp.sendRedirect("myAccount");
     }
-
-
 
 
     private boolean validate(){

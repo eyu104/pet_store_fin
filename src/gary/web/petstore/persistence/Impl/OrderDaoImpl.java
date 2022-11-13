@@ -8,8 +8,10 @@ import org.apache.log4j.Logger;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class OrderDaoImpl implements OrderDao {
@@ -118,9 +120,13 @@ public class OrderDaoImpl implements OrderDao {
                 order.setCardType(resultSet.getString(17));
                 order.setCourier(resultSet.getString(18));
                 order.setCreditCard(resultSet.getString(19));
+
                 order.setExpiryDate(resultSet.getString(20));
+
                 order.setLocale(resultSet.getString(21));
-                order.setOrderDate(resultSet.getDate(22));
+
+
+                order.setOrderDate(resultSet.getTimestamp(22));
                 order.setOrderId(resultSet.getInt(23));
                 order.setTotalPrice(resultSet.getBigDecimal(24));
                 order.setUsername(resultSet.getString(25));
@@ -165,7 +171,7 @@ public class OrderDaoImpl implements OrderDao {
                 order.setCreditCard(resultSet.getString(19));
                 order.setExpiryDate(resultSet.getString(20));
                 order.setLocale(resultSet.getString(21));
-                order.setOrderDate(resultSet.getDate(22));
+                order.setOrderDate(resultSet.getTimestamp(22));
                 order.setOrderId(resultSet.getInt(23));
                 order.setTotalPrice(resultSet.getBigDecimal(24));
                 order.setUsername(resultSet.getString(25));
@@ -188,7 +194,11 @@ public class OrderDaoImpl implements OrderDao {
             Connection connection = DBUtil.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_ORDER);
             preparedStatement.setInt(1,order.getOrderId());
-            preparedStatement.setString(3,(String) format.format(order.getOrderDate()));
+//            preparedStatement.setString(3,(String) format.format(order.getOrderDate()));
+//            preparedStatement.setDate(3, (java.sql.Date) order.getOrderDate());
+//            System.out.println((java.sql.Date) order.getOrderDate());
+            preparedStatement.setTimestamp(3,new Timestamp(order.getOrderDate().getTime()));
+            System.out.println(new Timestamp(order.getOrderDate().getTime()));
             preparedStatement.setString(2,order.getUsername());
             preparedStatement.setString(4,order.getShipAddress1());
             preparedStatement.setString(5,order.getShipAddress2());
@@ -234,7 +244,8 @@ public class OrderDaoImpl implements OrderDao {
             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_ORDERS_STATUS);
             preparedStatement.setInt(1,order.getOrderId());
             preparedStatement.setInt(2,order.getOrderId());
-            preparedStatement.setDate(3, new java.sql.Date(order.getOrderDate().getTime()));
+//            preparedStatement.setDate(3, new java.sql.Date(order.getOrderDate().getTime()));
+            preparedStatement.setTimestamp(3,new Timestamp(order.getOrderDate().getTime()));
             preparedStatement.setString(4,order.getStatus());
 
             preparedStatement.executeUpdate();
@@ -247,15 +258,19 @@ public class OrderDaoImpl implements OrderDao {
         }
     }
 
-//    public static void main(String[] args) {
+    public static void main(String[] args) {
 //        OrderDao orderDao = new OrderDaoImpl();
 //        Order order = new Order();
 //        order.setOrderId(1);
 //        order.setOrderDate(new java.util.Date());
 //        order.setStatus("ok");
-//
-//
+
+
 //        orderDao.insertOrderStatus(order);
-//    }
+        SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+
+        Date date = new Date();
+        System.out.println(format.format(date));
+    }
 
 }
