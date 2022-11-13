@@ -1,19 +1,19 @@
 <%@ include file="../common/top.jsp"%>
 <%@page pageEncoding="utf-8"%>
 
-<div id="BackLink">
-<%--    <stripes:link--%>
-<%--        beanclass="org.mybatis.jpetstore.web.actions.CatalogActionBean"--%>
-<%--        event="viewProduct">--%>
-<%--    <stripes:param name="productId" value="${actionBean.product.productId}" />--%>
-<%--    Return to ${actionBean.product.productId}--%>
-<%--</stripes:link>--%>
-    <a href="productForm?productId=${sessionScope.product.productId}">Return to ${sessionScope.product.productId}</a>
-</div>
+<%--<div id="BackLink">--%>
+<%--&lt;%&ndash;    <stripes:link&ndash;%&gt;--%>
+<%--&lt;%&ndash;        beanclass="org.mybatis.jpetstore.web.actions.CatalogActionBean"&ndash;%&gt;--%>
+<%--&lt;%&ndash;        event="viewProduct">&ndash;%&gt;--%>
+<%--&lt;%&ndash;    <stripes:param name="productId" value="${actionBean.product.productId}" />&ndash;%&gt;--%>
+<%--&lt;%&ndash;    Return to ${actionBean.product.productId}&ndash;%&gt;--%>
+<%--&lt;%&ndash;</stripes:link>&ndash;%&gt;--%>
+<%--    <a href="productForm?productId=${sessionScope.product.productId}">Return to ${sessionScope.product.productId}</a>--%>
+<%--</div>--%>
 
 <div id="Catalog">
 
-    <table>
+    <table class="itemtb">
         <tr>
             <td>${sessionScope.product.description}</td>
         </tr>

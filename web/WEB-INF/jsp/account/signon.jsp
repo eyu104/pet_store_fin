@@ -1,6 +1,12 @@
 
 <%@ include file="../common/top.jsp"%>
 <%@page pageEncoding="utf-8"%>
+
+<div id="BackLink">
+
+    <a href="mainForm">Return to Main Menu</a>
+</div>
+
 <div id="Catalog">
 
 

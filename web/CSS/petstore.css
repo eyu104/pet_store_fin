@@ -66,6 +66,8 @@ table {
     empty-cells: show;
 }
 
+
+
 td, th {
     empty-cells: show;
     padding: .3ex .3ex;
@@ -73,7 +75,6 @@ td, th {
     text-align: left;
     border-width: 0;
     border-spacing: 0;
-
 }
 
 .firsttr{
@@ -438,3 +439,6 @@ li a:hover {
 }
 
 
+.itemtb{
+    background-color:#FAD294DD ;
+}
