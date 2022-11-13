@@ -1,10 +1,5 @@
 <%@ include file="../common/top.jsp"%>
 <%@page pageEncoding="utf-8"%>
-<div id="BackLink">
-  <stripes:link
-        beanclass="org.mybatis.jpetstore.web.actions.CatalogActionBean">
-  回到主页</stripes:link>
-</div>
 
 <div id="Catalog">
 
