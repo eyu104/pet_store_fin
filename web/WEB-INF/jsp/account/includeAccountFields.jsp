@@ -47,14 +47,14 @@
 <%--            <stripes:text size="40" name="account.email" />--%>
 
             <c:if test="${sessionScope.loginAccount != null}">
-                <input type="text" size="40" name="account_email" value="${sessionScope.loginAccount.email}" style="border-radius: 5px;border-width: 1px">
+                <input type="email" size="40" name="account_email" value="${sessionScope.loginAccount.email}" style="border-radius: 5px;border-width: 1px">
             </c:if>
     <c:if test="${sessionScope.loginAccount == null && sessionScope.newAccount ==null}">
-                <input type="text" size="40" name="account_email" style="border-radius: 5px;border-width: 1px">
+                <input type="email" size="40" name="account_email" style="border-radius: 5px;border-width: 1px">
             </c:if>
 
             <c:if test="${sessionScope.newAccount != null}">
-                <input type="text" size="40" name="account_email" value="${sessionScope.newAccount.email}" style="border-radius: 5px;border-width: 1px">
+                <input type="email" size="40" name="account_email" value="${sessionScope.newAccount.email}" style="border-radius: 5px;border-width: 1px">
             </c:if>
 
         </td>

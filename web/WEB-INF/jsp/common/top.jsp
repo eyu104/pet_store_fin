@@ -51,7 +51,7 @@
         <div id="Search" style="background-color: #eaac00">
 
             <div id="SearchContent">
-                <form action="" method="post">
+                <form action="search" method="post">
                     <input type="text" name="keyword" size="15" style="height: 25px"  >
                     <input type="submit" value="搜索" style="height: 25px">
                 </form>

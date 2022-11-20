@@ -51,14 +51,14 @@
         <td>密码:</td>
         <td>
 <%--          <stripes:text name="password" />--%>
-          <input type="text" name="password" style="border-radius: 5px;border-width: 1px">
+          <input type="password" name="password" style="border-radius: 5px;border-width: 1px">
         </td>
       </tr>
       <tr>
         <td>重复密码:</td>
         <td>
 <%--          <stripes:text name="repeatedPassword" />--%>
-          <input type="text" name="repeatedPassword" style="border-radius: 5px;border-width: 1px">
+          <input type="password" name="repeatedPassword" style="border-radius: 5px;border-width: 1px">
         </td>
       </tr>
     </table>
