@@ -5,6 +5,7 @@ body {
     font-size: 2ex;
     color: #333;
     background-color: #ffffff;
+    width: 1305px;
 }
 
 pre {
@@ -382,6 +383,7 @@ body>#Banner {
     text-align:left;
 }
 
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -441,4 +443,32 @@ li a:hover {
 
 .itemtb{
     background-color:#FAD294DD ;
+}
+
+#productAutoComplete {
+    background: #ccc;
+    position: relative;
+    top: -25px;
+    left: 125px;
+    width: 180px;
+    display: none;
+}
+
+#productAutoList {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #aaa;
+}
+
+.productAutoItem {
+    list-style: none;
+    text-align: left;
+    height: 18.5px;
+    line-height: 18.5px;
+    font-size: 10px;
+    padding-left: 5px;
+    margin-top: 3px;
+    border-bottom: 1px solid #666;
+    color: #000000;
+    cursor: pointer;
 }

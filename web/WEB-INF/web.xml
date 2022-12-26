@@ -145,13 +145,13 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>NewAccountServlet</servlet-name>
-        <servlet-class>gary.web.petstore.web.servlet.NewAccountServlet</servlet-class>
+        <servlet-name>AccountIsVaildServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.AccountIsVaildServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>NewAccountServlet</servlet-name>
-        <url-pattern>/newAccount</url-pattern>
+        <servlet-name>AccountIsVaildServlet</servlet-name>
+        <url-pattern>/accountIsVaild</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -234,4 +234,48 @@
         <servlet-name>SearchServlet</servlet-name>
         <url-pattern>/search</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>productAutoCompleteServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.productAutoCompleteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>productAutoCompleteServlet</servlet-name>
+        <url-pattern>/productAuto</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetCheckcodeServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.GetCheckcodeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetCheckcodeServlet</servlet-name>
+        <url-pattern>/getCheckcode</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>NewAccountServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.NewAccountServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>NewAccountServlet</servlet-name>
+        <url-pattern>/newAccount</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.UpdateServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateServlet</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+
+
+
+
 </web-app>

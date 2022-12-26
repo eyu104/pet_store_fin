@@ -24,10 +24,6 @@ public class NewOrderFormServlet extends HttpServlet {
         HttpSession session = req.getSession();
         Account account = (Account) session.getAttribute("loginAccount");
 
-
-
-
-
         if (account == null){
             resp.sendRedirect("signOnForm");
         }else {

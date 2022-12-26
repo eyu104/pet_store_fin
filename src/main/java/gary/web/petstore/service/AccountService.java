@@ -46,6 +46,10 @@ public class AccountService {
         return accountDao.getAccountByUsernameAndPassword(account);
     }
 
+    public Account getAccountByUsername(String username){
+        return accountDao.getAccountByUsername(username);
+    }
+
     public List<String> getLanguages() {
         return LANGUAGE_LIST;
     }

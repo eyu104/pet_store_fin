@@ -74,6 +74,11 @@ public class Cart implements Serializable {
         cartItem.setQuantity(quantity);
     }
 
+    public BigDecimal getTotalByItemId(String itemId){
+        CartItem cartItem = (CartItem) itemMap.get(itemId);
+        return cartItem.getTotal();
+    }
+
     public BigDecimal getSubTotal() {
         BigDecimal subTotal = new BigDecimal("0");
         Iterator<CartItem> items = getAllCartItems();

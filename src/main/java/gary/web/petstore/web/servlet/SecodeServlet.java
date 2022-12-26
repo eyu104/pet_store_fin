@@ -70,6 +70,7 @@ public class SecodeServlet extends HttpServlet {
         baos.close();
         sos.close();
         //将验证码放到session中
+
         session.setAttribute("checkCode", new String(rands ));
     }
 }

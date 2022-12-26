@@ -10,6 +10,8 @@
 <head>
     <title>MyPetStore</title>
     <link rel="StyleSheet" href="CSS/petstore.css" type="text/css" media="screen" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
+
 
 
 </head>
@@ -49,13 +51,18 @@
         </div>
 
         <div id="Search" style="background-color: #eaac00">
-
             <div id="SearchContent">
                 <form action="search" method="post">
-                    <input type="text" name="keyword" size="15" style="height: 25px"  >
+                    <input type="text" name="keyword" id="keyword" size="15" style="height: 25px"  >
                     <input type="submit" value="搜索" style="height: 25px">
                 </form>
-
+                <div id="productAutoComplete">
+                    <ul id="productAutoList">
+                        <li class="productAutoItem">qwqrqw</li>
+                        <li class="productAutoItem">qwrqqw</li>
+                        <li class="productAutoItem">qwrqw</li>
+                    </ul>
+                </div>
             </div>
         </div>
 

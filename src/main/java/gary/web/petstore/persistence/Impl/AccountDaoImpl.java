@@ -55,9 +55,45 @@ public class AccountDaoImpl implements AccountDao {
             "      BANNEROPT =?" +
             "    WHERE USERID = ?";
 
+    private static final String GET_ACCOUNT_BY_USERNAME = " SELECT" +
+            "          SIGNON.USERNAME," +
+            "          ACCOUNT.EMAIL," +
+            "          ACCOUNT.FIRSTNAME," +
+            "          ACCOUNT.LASTNAME," +
+            "          ACCOUNT.STATUS," +
+            "          ACCOUNT.ADDR1 AS address1," +
+            "          ACCOUNT.ADDR2 AS address2," +
+            "          ACCOUNT.CITY," +
+            "          ACCOUNT.STATE," +
+            "          ACCOUNT.ZIP," +
+            "          ACCOUNT.COUNTRY," +
+            "          ACCOUNT.PHONE," +
+            "          PROFILE.LANGPREF AS languagePreference," +
+            "          PROFILE.FAVCATEGORY AS favouriteCategoryId," +
+            "          PROFILE.MYLISTOPT AS listOption," +
+            "          PROFILE.BANNEROPT AS bannerOption," +
+            "          BANNERDATA.BANNERNAME" +
+            "    FROM ACCOUNT, PROFILE, SIGNON, BANNERDATA" +
+            "    WHERE ACCOUNT.USERID = ?" +
+            "      AND SIGNON.USERNAME = ACCOUNT.USERID" +
+            "      AND PROFILE.USERID = ACCOUNT.USERID" +
+            "      AND PROFILE.FAVCATEGORY = BANNERDATA.FAVCATEGORY";
+
     @Override
     public Account getAccountByUsername(String username) {
-        return null;
+        Account accountResult = null;
+        try {
+            Connection connection = DBUtil.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(GET_ACCOUNT_BY_USERNAME);
+            preparedStatement.setString(1, username);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()){
+                accountResult = this.resultSetToAccount(resultSet);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return accountResult;
     }
 
     @Override

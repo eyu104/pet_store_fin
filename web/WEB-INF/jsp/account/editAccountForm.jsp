@@ -42,14 +42,14 @@
         <td>新密码:</td>
         <td>
 <%--          <stripes:text name="password" />--%>
-          <input type="password" name="password" style="border-radius: 5px;border-width: 1px">
+          <input type="password" name="password" style="border-radius: 5px;border-width: 1px" required="required">
         </td>
       </tr>
       <tr>
         <td>重复密码:</td>
         <td>
 <%--          <stripes:text name="repeatedPassword" />--%>
-          <input type="password" name="repeatedPassword" style=";border-width: 1px;border-radius: 5px">
+          <input type="password" name="repeatedPassword" style=";border-width: 1px;border-radius: 5px" required="required">
         </td>
       </tr>
     </table>
