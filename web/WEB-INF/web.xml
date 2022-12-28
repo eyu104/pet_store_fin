@@ -144,15 +144,7 @@
         <url-pattern>/checkCode</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <servlet-name>AccountIsVaildServlet</servlet-name>
-        <servlet-class>gary.web.petstore.web.servlet.AccountIsVaildServlet</servlet-class>
-    </servlet>
 
-    <servlet-mapping>
-        <servlet-name>AccountIsVaildServlet</servlet-name>
-        <url-pattern>/accountIsVaild</url-pattern>
-    </servlet-mapping>
 
     <servlet>
         <servlet-name>EditAccountServlet</servlet-name>
@@ -273,6 +265,16 @@
     <servlet-mapping>
         <servlet-name>UpdateServlet</servlet-name>
         <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AccountIsVaildServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.AccountIsVaildServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AccountIsVaildServlet</servlet-name>
+        <url-pattern>/accountIsVaild</url-pattern>
     </servlet-mapping>
 
 
