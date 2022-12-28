@@ -9,80 +9,85 @@
 
 <head>
     <title>MyPetStore</title>
-<%--    <link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,600,800" rel="stylesheet">--%>
 
-<%--    <!-- Font Awesome Icons -->--%>
-<%--    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">--%>
-
-<%--    <!-- Main CSS -->--%>
-<%--    <link href="CSS/main.css" rel="stylesheet"/>--%>
-
-<%--    <!-- Animation CSS -->--%>
-<%--    <link href="CSS/vendor/aos.css" rel="stylesheet"/>--%>
-    <link rel="StyleSheet" href="CSS/petstore.css" type="text/css" media="screen" />
+    <link rel="StyleSheet" href="./CSS/petstore.css" type="text/css" media="screen" />
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,600,800" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/d8c443cac1.js" crossorigin="anonymous"></script>
+    <!-- Main CSS -->
+    <link href="./assets/css/main.css" rel="stylesheet"/>
+
+    <!-- Animation CSS -->
+    <link href="./assets/css/vendor/aos.css" rel="stylesheet"/>
 </head>
 
 <body >
 
 
-<div id="Logo">
-    <div id="LogoContent">
-        <a href="mainForm"><img src="images/storelogo.gif" width="80" /></a>
-    </div>
-</div>
 
-<div id="Menu">
-    <div id="MenuContent">
+<nav class="topnav navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="cartForm"><i class="fas fa-anchor mr-2"></i><strong>Pet</strong> store</a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <a href="cartForm"><img align="middle" name="img_cart" src="images/cart.gif" width="30" /></a>
-        <img align="middle" src="images/seperate.gif" width="20"/>
-
-
-
-
-        <c:if test="${sessionScope.loginAccount == null}">
-            <a href="signOnForm" style="color:white;font-size: 25px"><b>登录</b></a>
-            <img align="middle" src="images/seperate.gif" width="20"/>
-        </c:if>
-        <c:if test="${sessionScope.loginAccount != null}">
-            <a href="signOff" style="color:white;font-size: 25px"><b>登出</b></a>
-            <img align="middle" src="images/seperate.gif" width="20"/>
-
-            <a href="myAccount" style="color: white;font-size: 25px"><b>我的账户</b></a>
-            <img align="middle" src="images/seperate.gif" width="20"/>
-        </c:if>
-
-
-
-        <a href="help.html"><img align="middle" src="images/question.gif" width="35"/></a>
-    </div>
-</div>
-
-<div id="Search" style="background-color: #eaac00">
-    <div id="SearchContent">
-        <form action="search" method="post">
-            <input type="text" name="keyword" id="keyword" size="15" style="height: 25px"  >
-            <input type="submit" value="搜索" style="height: 25px">
-        </form>
-        <div id="productAutoComplete">
-            <ul id="productAutoList">
-
+        <div class="navbar-collapse collapse" id="navbarColor02" style="">
+            <ul class="navbar-nav mr-auto d-flex align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link bor" href="categoryForm?categoryId=FISH"><img src="./images/fish.png" width="40"/></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bor" href="categoryForm?categoryId=DOGS"><img src="images/dog.png" width="40"/></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bor" href="categoryForm?categoryId=REPTILES"><img src="./images/reptile.png" width="40"/></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bor" href="categoryForm?categoryId=CATS"><img src="images/cat.png" width="40"/></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link bor" href="categoryForm?categoryId=BIRDS"><img src="images/bird.png" width="40"/></a>
+                </li>
             </ul>
+
+
+            <ul class="navbar-nav ml-auto d-flex align-items-center">
+
+                <li class="nav-item">
+                    <a  class="nav-link" href="">搜索 <i class="fa-solid fa-magnifying-glass"></i></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="help.html">帮助 <i class="fa-regular fa-circle-question"></i></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">账户 <i class="fa-solid fa-user"></i></a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href=""><i class="fa-solid fa-door-open"></i> 登录</a>
+                        <a class="dropdown-item" href=""><i class="fa-solid fa-registered"></i> 注册</a>
+                        <a class="dropdown-item" href=""><i class="fa-solid fa-address-card"></i> 个人中心</a>
+                        <a class="dropdown-item" href=""><i class="fa-solid fa-cart-shopping"></i> 购物车</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="cartForm">&nbsp;  <i class="fa-solid fa-house-chimney"></i></a>
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                            data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    </button>
+                </li>
+            </ul>
+
+
         </div>
     </div>
-</div>
+</nav>
 
-<div id="QuickLinks" class="quickbox">
-    <a href="categoryForm?categoryId=FISH"><img src="images/fish.gif" width="40"/></a>
-    <img src="images/sepblack.gif" width="20"/>
-    <a href="categoryForm?categoryId=DOGS"><img src="images/dog.gif" width="40"/></a>
-    <img src="images/sepblack.gif" width="20"/>
-    <a href="categoryForm?categoryId=REPTILES"><img src="images/reptile.gif" width="40"/></a>
-    <img src="images/sepblack.gif" width="20"/>
-    <a href="categoryForm?categoryId=CATS"><img src="images/cat.gif" width="40"/></a>
-    <img src="images/sepblack.gif" width="20"/>
-    <a href="categoryForm?categoryId=BIRDS"><img src="images/bird.gif" width="40"/></a>
-</div>
 
 <div id="Content">
