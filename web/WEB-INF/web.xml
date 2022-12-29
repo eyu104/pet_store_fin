@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <servlet>
+        <servlet-name>MainFormServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.MainFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MainFormServlet</servlet-name>
+        <url-pattern>/mainForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CategoryFoemServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.CategoryFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CategoryFoemServlet</servlet-name>
+        <url-pattern>/categoryForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ProductFoemServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.ProductFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ProductFoemServlet</servlet-name>
+        <url-pattern>/productForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ItemFoemServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.ItemFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ItemFoemServlet</servlet-name>
+        <url-pattern>/itemForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddItemToCartServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.AddItemToCartServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddItemToCartServlet</servlet-name>
+        <url-pattern>/addItemToCart</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateCartServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.UpdateCartServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateCartServlet</servlet-name>
+        <url-pattern>/updateCart</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RemoveCartItemServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.RemoveCartItemServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RemoveCartItemServlet</servlet-name>
+        <url-pattern>/removeCartItem</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CartFormServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.CartFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CartFormServlet</servlet-name>
+        <url-pattern>/cartForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SignOnFormServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.SignOnFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SignOnFormServlet</servlet-name>
+        <url-pattern>/signOnForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>NewOrderFormServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.NewOrderFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>NewOrderFormServlet</servlet-name>
+        <url-pattern>/newOrderForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SignOnServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.SignOnServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SignOnServlet</servlet-name>
+        <url-pattern>/signOn</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>NewAccountFormServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.NewAccountFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>NewAccountFormServlet</servlet-name>
+        <url-pattern>/newAccountForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MyAccountServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.MyAccountServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MyAccountServlet</servlet-name>
+        <url-pattern>/myAccount</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>SecodeServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.SecodeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SecodeServlet</servlet-name>
+        <url-pattern>/checkCode</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>EditAccountServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.EditAccountServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EditAccountServlet</servlet-name>
+        <url-pattern>/editAccount</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SignOffServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.SignOffServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SignOffServlet</servlet-name>
+        <url-pattern>/signOff</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ConfirmOrderFormServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.ConfirmOrderFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ConfirmOrderFormServlet</servlet-name>
+        <url-pattern>/confirmOrderForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ShippingOrderFormServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.ShippingOrderFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ShippingOrderFormServlet</servlet-name>
+        <url-pattern>/shippingOrderForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ListOrdersFormServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.ListOrdersFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ListOrdersFormServlet</servlet-name>
+        <url-pattern>/listOrdersForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ViewOrderFormServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.ViewOrderFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ViewOrderFormServlet</servlet-name>
+        <url-pattern>/viewOrderForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ContinueOrderServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.ContinueOrderServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ContinueOrderServlet</servlet-name>
+        <url-pattern>/continueOrder</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.SearchServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/search</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>productAutoCompleteServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.productAutoCompleteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>productAutoCompleteServlet</servlet-name>
+        <url-pattern>/productAuto</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetCheckcodeServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.GetCheckcodeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetCheckcodeServlet</servlet-name>
+        <url-pattern>/getCheckcode</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>NewAccountServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.NewAccountServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>NewAccountServlet</servlet-name>
+        <url-pattern>/newAccount</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.UpdateServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateServlet</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AccountIsVaildServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.AccountIsVaildServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AccountIsVaildServlet</servlet-name>
+        <url-pattern>/accountIsVaild</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>SearchFormServlet</servlet-name>
+        <servlet-class>gary.web.petstore.web.servlet.SearchFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SearchFormServlet</servlet-name>
+        <url-pattern>/searchForm</url-pattern>
+    </servlet-mapping>
+
+
+
+
+</web-app>
