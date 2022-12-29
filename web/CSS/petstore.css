@@ -484,24 +484,28 @@ body {
 .mp #productAutoComplete {
     background: #ccc;
     position: relative;
-    top: -25px;
-    left: 125px;
-    width: 180px;
+    top: -1px;
+    left: 80px;
+    width: 500px;
     display: none;
 }
 
-.mp #productAutoList {
+.mq #productAutoList {
     margin: 0;
     padding: 0;
+    width: 500px;
     border: 1px solid #aaa;
+}
+.mq ul {
+    background-color: rgb(255,255,255);
 }
 
 .mp .productAutoItem {
     list-style: none;
     text-align: left;
-    height: 18.5px;
-    line-height: 18.5px;
-    font-size: 10px;
+    height: 33.5px;
+    line-height: 33.5px;
+    font-size: 21px;
     padding-left: 5px;
     margin-top: 3px;
     border-bottom: 1px solid #666;
@@ -567,9 +571,11 @@ body {
 .nav-search .mp .search-btn {
     position: relative;
     width: 80px;
-    top: -1px;
+    top: -2px;
+    left: 75px;
     height: 44px;
     font-size: 20px;
+    color: #666;
 }
 
 .nav-search .logo {

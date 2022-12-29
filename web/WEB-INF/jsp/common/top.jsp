@@ -76,6 +76,7 @@
                             <a class="dropdown-item" href="newAccountForm"><i class="fa-solid fa-registered"></i> 注册</a>
                         </c:if>
                         <c:if test="${sessionScope.loginAccount != null}">
+                            <a class="dropdown-item" href="#"> ${sessionScope.loginAccount.username}</a>
                             <a class="dropdown-item" href="myAccount"><i class="fa-solid fa-address-card"></i> 个人中心</a>
                             <a class="dropdown-item" href="signOff"><i class="fa-solid fa-right-to-bracket"></i> 登出</a>
                         </c:if>

@@ -52,6 +52,7 @@
           <input type="password" name="repeatedPassword" style=";border-width: 1px;border-radius: 5px" required="required">
         </td>
       </tr>
+
     </table>
     <%@ include file="includeAccountFields.jsp"%>
 

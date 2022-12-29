@@ -62,6 +62,14 @@
           <input type="password" name="repeatedPassword" style="border-radius: 5px;border-width: 1px" required="required">
         </td>
       </tr>
+        <tr>
+            <td>验证码</td>
+            <td>
+                <input type="text" name="secode" id="secode" style="border-radius: 5px;border-width: 1px" placeholder="验证码:"><br/>
+                <img border="0" src="checkCode" onclick="this.src='checkCode?'+Math.random();">
+                <p id="signOnMsg"><font color="red"></font></p>
+            </td>
+        </tr>
     </table>
       <c:if test="${sessionScope.Msg != null}">
           <p><font color="red">${sessionScope.Msg}</font></p>
