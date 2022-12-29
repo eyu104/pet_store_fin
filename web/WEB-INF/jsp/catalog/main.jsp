@@ -66,23 +66,38 @@
             <!-- 轮播（Carousel）项目 -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <a href="categoryForm?categoryId=DOGS"><img src="./images/1.gif" class="d-block w-100" alt="First slide"></a>
+                    <a href="categoryForm?categoryId=DOGS">
+                        <img src="./images/1.gif" class="d-block w-100" alt="Dogs"
+                             onmouseover="showInform(alt);" onmouseout="hiddenInform(event)">
+                    </a>
                     <div class="carousel-caption"><a href="categoryForm?categoryId=DOGS" style="color: white">宠物狗</a></div>
                 </div>
                 <div class="item">
-                    <a href="categoryForm?categoryId=BIRDS"><img src="./images/2.gif" class="d-block w-100" alt="Second slide"></a>
+                    <a href="categoryForm?categoryId=BIRDS">
+                        <img src="./images/2.gif" class="d-block w-100" alt="Birds"
+                             onmouseover="showInform(alt);" onmouseout="hiddenInform(event)">
+                    </a>
                     <div class="carousel-caption"><a href="categoryForm?categoryId=BIRDS" style="color: white">宠物鸟</a></div>
                 </div>
                 <div class="item">
-                    <a href="categoryForm?categoryId=CATS"><img src="./images/3.gif" class="d-block w-100" alt="Third slide"></a>
+                    <a href="categoryForm?categoryId=CATS">
+                        <img src="./images/3.gif" class="d-block w-100" alt="Cats"
+                             onmouseover="showInform(alt);" onmouseout="hiddenInform(event)">
+                    </a>
                     <div class="carousel-caption"><a href="categoryForm?categoryId=CATS" style="color: white">宠物猫</a></div>
                 </div>
                 <div class="item">
-                    <a href="categoryForm?categoryId=REPTILES"><img src="./images/4.gif" class="d-block w-100" alt="Forth slide"></a>
+                    <a href="categoryForm?categoryId=REPTILES">
+                        <img src="./images/4.gif" class="d-block w-100" alt="Reptiles"
+                             onmouseover="showInform(alt);" onmouseout="hiddenInform(event)">
+                    </a>
                     <div class="carousel-caption"><a href="categoryForm?categoryId=REPTILES" style="color: white">宠物爬行类</a></div>
                 </div>
                 <div class="item">
-                    <a href="categoryForm?categoryId=FISH"><img src="./images/5.gif" class="d-block w-100" alt="Fifth slide"></a>
+                    <a href="categoryForm?categoryId=FISH">
+                        <img src="./images/5.gif" class="d-block w-100" alt="Fish"
+                             onmouseover="showInform(alt);" onmouseout="hiddenInform(event)">
+                    </a>
                     <div class="carousel-caption" ><a href="categoryForm?categoryId=FISH" style="color: white">宠物鱼</a></div>
                 </div>
             </div>
@@ -92,7 +107,16 @@
         </div>
     </div>
 
+    <div id="inform" style="display: none">sssssssssss</div>
+    <script type="text/javascript" src="${pageContext.request.contextPath }/js/mouseEvent.js"></script>
 
+    <script type="text/javascript">
+        function showInform(categoryId) {
+            console.log(categoryId);
+            sendRequest("${pageContext.request.contextPath}/categoryShowJsServlet?categoryId=" + categoryId);
+            //sendRequest("categoryShowJsServlet");
+        }
+    </script>
 
     <div id="Separator" class="mp">&nbsp;</div>
 </div>
