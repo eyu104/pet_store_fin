@@ -20,7 +20,7 @@
 
 </div>
 <script src="js/productAuto.js"></script>
-<%--<script src="js/account.js"></script>--%>
+<script src="js/account.js"></script>
 <script src="js/cartUpdate.js"></script>
 
 <script src="./assets/js/vendor/popper.min.js" type="text/javascript"></script>
