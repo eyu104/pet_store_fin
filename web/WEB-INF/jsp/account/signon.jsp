@@ -2,14 +2,14 @@
 <%@ include file="../common/top.jsp"%>
 <%@page pageEncoding="utf-8"%>
 
-<div id="BackLink">
+<div id="BackLink" class="mp">
 
     <a href="mainForm">Return to Main Menu</a>
 </div>
 
-<div id="Catalog">
+<div id="Catalog" class="mp">
 
-    <form class="loginbox" id="loginForm" action="signOn" method="post" onsubmit="javascript:check()" >
+    <form class="loginbox mp" id="loginForm" action="signOn" method="post" onsubmit="javascript:check()" >
         <p><b>请输入你的用户名和密码</b></p>
 
         <input type="text" name="username" id="username" style="border-radius: 5px;border-width: 1px" placeholder="用户名:">

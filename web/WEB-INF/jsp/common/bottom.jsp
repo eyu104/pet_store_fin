@@ -1,11 +1,13 @@
 </div>
+<div class="mp none" id="none" style="padding-bottom: 100px">
 
-<div id="Footer">
+</div>
+<div id="Footer" class="mp">
 
-    <div id="PoweredBy" style="background-color: #EAAC00FF">&nbsp<a href="http://www.csu.edu.cn" style="color: white"><b>www.csu.edu.cn</b></a>
+    <div id="PoweredBy"  class="mp" style="background-color: #EAAC00FF">&nbsp<a href="http://www.csu.edu.cn" style="color: white"><b class="mp addre">www.csu.edu.cn</b></a>
     </div>
 
-    <div id="Banner" style="background-color: #EAAC00FF">
+    <div id="Banner" style="background-color: #EAAC00FF" class="mp">
         <!-- 登录用户的banner -->
         <c:if test="${sessionScope.loginAccount != null }">
 

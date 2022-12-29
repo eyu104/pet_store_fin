@@ -11,9 +11,9 @@
 <%--    <a href="productForm?productId=${sessionScope.product.productId}">Return to ${sessionScope.product.productId}</a>--%>
 <%--</div>--%>
 
-<div id="Catalog">
+<div id="Catalog" class="mp">
 
-    <table class="itemtb">
+    <table class="itemtb mp">
         <tr>
             <td>${sessionScope.product.description}</td>
         </tr>

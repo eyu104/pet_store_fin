@@ -1,8 +1,8 @@
 <%@ include file="../common/top.jsp"%>
 <%@page pageEncoding="utf-8"%>
 
-<div id="Catalog" >
-    <div class="account">
+<div id="Catalog mp" >
+    <div class="account mp">
 <%--  <stripes:form--%>
 <%--        beanclass="org.mybatis.jpetstore.web.actions.AccountActionBean"--%>
 <%--        focus="">--%>
@@ -30,10 +30,10 @@
 <%--  <stripes:submit name="newAccount" value="Save Account Information" />--%>
 
 <%--</stripes:form>--%>
-  <form action="newAccount?" method="post">
+  <form action="newAccount?" method="post" class="mp">
     <h2>用户信息</h2>
 
-    <table >
+    <table class="mp">
       <tr>
         <td>用户名:</td>
         <td>

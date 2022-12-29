@@ -1,15 +1,15 @@
 <%@ include file="../common/top.jsp"%>
 <%@page pageEncoding="utf-8"%>
 
-<div id="BackLink">
+<div id="BackLink" class="mp">
     <a href="categoryForm?categoryId=${sessionScope.category.categoryId}">Return to ${sessionScope.category.name}</a>
 </div>
 
-<div id="Catalog">
+<div id="Catalog" class="mp imp">
 
     <h2>${sessionScope.product.name}</h2>
 
-    <table>
+    <table class="mp">
         <tr class="firsttr">
             <th>商品ID</th>
             <th>产品ID</th>

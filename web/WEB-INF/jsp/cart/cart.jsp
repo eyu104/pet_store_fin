@@ -1,9 +1,9 @@
 <%@ include file="../common/top.jsp"%>
 <%@page pageEncoding="utf-8"%>
 
-<div id="Catalog">
+<div id="Catalog" class="mp">
 
-  <div id="Cart">
+  <div id="Cart" class="mp">
 
     <h2>购物车</h2>
 <%--    <stripes:form--%>
@@ -13,9 +13,9 @@
 <%--    </stripes:form>--%>
 
 
-    <form action="updateCart" method="post" id="upDateCart">
-      <table>
-        <tr class="firsttr">
+    <form action="updateCart" method="post" id="upDateCart" class="mp">
+      <table class="mp">
+        <tr class="firsttr mp">
           <th><b>商品ID</b></th>
           <th><b>产品ID</b></th>
           <th><b>描述</b></th>
@@ -84,7 +84,7 @@
 
   </div>
 
-  <div id="Separator">&nbsp;</div>
+  <div id="Separator" class="mp">&nbsp;</div>
 </div>
 
 <%@ include file="../common/bottom.jsp"%>

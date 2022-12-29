@@ -1,15 +1,15 @@
 <%@ include file="../common/top.jsp"%>
 <%@page pageEncoding="utf-8"%>
 
-<div id="BackLink">
+<div id="BackLink" class="mp">
 
     <a href="" >返回主页面</a>
 
 </div>
 <%--                                      1.1                        --%>
-<div id="Catalog">请确认一下信息
+<div id="Catalog" class="mp">请确认一下信息
 
-    <table>
+    <table class="mp">
         <tr>
             <th align="center" colspan="2"><font size="4"><b>Order</b></font>
                 <br />

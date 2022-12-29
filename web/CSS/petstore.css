@@ -1,3 +1,6 @@
+html {
+    padding-top: 150px;
+}
 body {
     margin: 0ex 10ex 0ex 10ex;
     padding: 0ex;
@@ -5,10 +8,10 @@ body {
     font-size: 2ex;
     color: #333;
     background-color: #ffffff;
-    width: 1305px;
+
 }
 
-pre {
+.mp  pre {
     font-family: "Courier New", Courier, mono;
 
     font-style: normal;
@@ -16,7 +19,7 @@ pre {
     white-space: pre
 }
 
-h1 {
+.mp h1 {
     margin: 1ex 0ex 1ex 0ex;
     padding: 0ex;
 
@@ -26,16 +29,16 @@ h1 {
     text-align: center;
 }
 
-h2 {
+.mp>h2 {
     margin: 2ex 0ex 1ex 0ex;
     padding: 0ex;
-
+    text-align: center;
     line-height: 2ex;
     font-weight: 700;
     color: #444;
 }
 
-h3 {
+.mp h3 {
     margin: 1ex 0ex 1ex 0ex;
     padding: 0ex;
 
@@ -44,32 +47,36 @@ h3 {
     color: #222;
 }
 
-p {
+.mp p {
     font-family: helvetica, tahoma, arial, verdana, sans-serif;
 
     margin: 0ex 0ex 0ex 0ex;
     padding: 2ex;
 }
 
-img {
+.mp img {
     border: 0;
 }
 
-li {
+.mp li {
     font-family: helvetica, tahoma, arial, verdana, sans-serif;
 
     margin: 0ex 0ex 0ex 0ex;
     padding: 0ex;
 }
 
-table {
-    border-width: 0;
+.mp table {
+
     empty-cells: show;
+    margin: auto;
+    border-style: solid;
+    border-color: #6c757d;
+    border-width: medium;
 }
 
 
 
-td, th {
+.mp td, th {
     empty-cells: show;
     padding: .3ex .3ex;
     vertical-align: top;
@@ -78,7 +85,7 @@ td, th {
     border-spacing: 0;
 }
 
-.firsttr{
+.mp .firsttr{
     empty-cells: show;
     padding: .3ex .3ex;
     vertical-align: top;
@@ -90,22 +97,22 @@ td, th {
 }
 
 
-th {
+.mp th {
     font-weight: bold;
 }
 
-a, a:visited, a:link {
+.mp a, a:visited, a:link {
     color: #eaac00;
 
     text-decoration: none;
     font-family: helvetica, tahoma, arial, verdana, sans-serif;
 }
 
-a:hover {
+.mp a:hover {
     color: rgba(241, 200, 143, 0.87);
 }
 
-a.Button, a.Button:link, a.Button:visited {
+.mp a.Button, a.Button:link, a.Button:visited {
     padding: .3ex;
     color: #fff;
     background-color: #eaac00;
@@ -115,18 +122,18 @@ a.Button, a.Button:link, a.Button:visited {
     border-radius: 5px;
 }
 
-a.Button:hover {
+.mp a.Button:hover {
     color: #ffffff;
     background-color: rgba(241, 200, 143, 0.87);
     cursor:pointer;
 }
 
-input{
+.mp input{
     background-color: rgba(255, 241, 204, 0.74);
 }
 
 
-#Logo {
+.mp #Logo {
     width: 33%;
     height: 9ex;
     margin: 0ex 0ex 0ex 0ex;
@@ -143,11 +150,11 @@ input{
     height: 9ex;
 }
 
-body>#Logo {
+.mp body>#Logo {
     height: 9ex;
 }
 
-#Menu {
+.mp #Menu {
     width: 33%;
     height: 9ex;
     margin: 0ex 0ex 0ex 0ex;
@@ -167,19 +174,19 @@ body>#Logo {
     height: 9ex;
 }
 
-#Menu, #Menu a, #Menu a:link, #Menu a:visited, #Menu a:hover {
+.mp #Menu, #Menu a, #Menu a:link, #Menu a:visited, #Menu a:hover {
     color: #eaac00;
     text-decoration: none;
     font-family: helvetica, tahoma, arial, verdana, sans-serif;
 }
 
-body>#Menu {
+.mp body>#Menu {
     height: 9ex;
 }
 
 
 
-#Search {
+.mp #Search {
     width: 33%;
     height: 9ex;
     margin: 0ex 0ex 0ex 0ex;
@@ -198,11 +205,11 @@ body>#Menu {
 
 }
 
-body>#Search {
+.mp body>#Search {
     height: 9ex;
 }
 
-#Search input[type="text"] {
+.mp #Search input[type="text"] {
     border-width: .1ex .1ex .1ex .1ex;
     border-style: solid;
     border-color: #000000;
@@ -215,7 +222,7 @@ body>#Search {
 }
 
 
-#Search input[type="submit"] {
+.mp #Search input[type="submit"] {
     background-color: #eaac00;
     border-color: white;
     color: white;
@@ -223,7 +230,7 @@ body>#Search {
     border-radius: 5px;
 }
 
-#Search input[type="submit"]:hover {
+.mp #Search input[type="submit"]:hover {
     background-color:#FAD294DD ;
     border-color: white;
     color: white;
@@ -231,14 +238,18 @@ body>#Search {
     border-radius: 5px;
 }
 
-#QuickLinks {
+.mp #QuickLinks {
     text-align: center;
     background-color: #FFF;
     width: 99%;
 }
-
-#PoweredBy {
-    width: 30%;
+.mp .addre {
+    padding-left: 50px;
+}
+.mp #PoweredBy {
+    width: 33%;
+    position: absolute;
+    left: 0px;
     height: 4ex;
     margin: 0ex 0ex 0ex 0ex;
     padding: 0ex 0ex 0ex 0ex;
@@ -254,12 +265,14 @@ body>#Search {
     height: 9ex;
 }
 
-body>#PoweredBy {
+.mp body>#PoweredBy {
     height: 4ex;
 }
 
-#Banner {
-    width: 69%;
+.mp #Banner {
+    width: 1010px;
+    position: absolute;
+    right: 0px;
     height: 4ex;
     margin: 0ex 0ex 0ex 0ex;
     padding: 0ex 0ex 0ex 0ex;
@@ -275,13 +288,13 @@ body>#PoweredBy {
     height: 9ex;
 }
 
-body>#Banner {
+.mp body>#Banner {
     height: 4ex;
 }
 
-#Content {
+.mp #Content {
     margin: 0;
-    padding: 0ex 0ex 0ex 0ex;
+    padding: 0ex 0ex 10ex 0ex; !important;
     width: 99%;
     color: #333;
     background-color: #FFF;
@@ -291,13 +304,13 @@ body>#Banner {
 
 }
 
-#Separator {
+.mp #Separator {
     clear:both;
     margin: 0;
     height:0;
 }
 
-#Main {
+.mp #Main {
     margin: 0;
     padding: 1ex;
     color: #333;
@@ -307,41 +320,42 @@ body>#Banner {
     border-color: #fff;
 }
 
-#Sidebar {
+.mp #Sidebar {
     float: left;
     /*background:inherit;*/
     width: 30%;
 }
 
-#MainImage {
+.mp #MainImage {
     float: left;
     background:inherit;
     text-align:center;
     width: 50%;
 }
 
-#Catalog {
-    padding: 1ex;
+.mp #Catalog {
+    padding: 1ex 1ex 1ex 1ex;
+    padding-top: 200px;
     background:inherit;
     text-align:center;
 }
 
-.account th,td{
+.mp .account th,td{
     background-color: white;
 }
 
-.account input[type="text"]{
+.mp .account input[type="text"]{
     color: black;
     background-color: white;
     border-color: #eaac00;
 }
 
-.account input[type="text"]:focus{
+.mp .account input[type="text"]:focus{
     border-color: #eaac00;
 
 }
 
-#Catalog input[type="submit"]{
+.mp #Catalog input[type="submit"]{
 
     color: #fff;
     background-color: #eaac00;
@@ -350,19 +364,22 @@ body>#Banner {
     font-size: 2ex;
     border-width:0;
 }
-#Catalog input[type="submit"]:hover {
+.mp #Catalog input[type="submit"]:hover {
     color: #ffffff;
     background-color: rgba(250, 210, 148, 0.87);
     cursor:pointer;
 }
 
 
-#Catalog table{
+.mp #Catalog table{
     margin-left:auto;
     margin-right:auto;
+    border-style: solid;
+    border-color: #6c757d;
+    border-width: medium;
 }
 
-#BackLink{
+.mp #BackLink{
     padding: 1ex;
     float: right;
     border-width: .1ex 0ex .1ex 0px;
@@ -370,13 +387,14 @@ body>#Banner {
     border-color: #000;
 }
 
-#Cart{
+.mp #Cart{
     width: 69.99%;
     float: left;
+    text-align: center;
     background-color:#fff;
 }
 
-#MyList{
+.mp #MyList{
     width: 30%;
     float: left;
     background-color: #ffffff;
@@ -384,7 +402,7 @@ body>#Banner {
 }
 
 
-ul {
+.mp ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -392,7 +410,7 @@ ul {
 
 }
 
-li.cateItem a {
+.mp li.cateItem a {
     display: block;
     color: #ea9800;
     padding: 8px 16px;
@@ -402,15 +420,15 @@ li.cateItem a {
     transition: width 1s,height 1s;
 }
 
-li.cateItem a:hover {
+.mp li.cateItem a:hover {
     background-color: #ea9800;
     color: white;
     width: 300px;
     height: 45px;
 }
 
-.loginbox{
-    width:300px;
+.mp .loginbox{
+    width:400px;
     padding:40px;
     top:23ex;
     left:50%;
@@ -419,8 +437,11 @@ li.cateItem a:hover {
     text-align: center;
     position:relative;
 }
+.mp>form {
+    text-align: center;
+}
 
-.loginbox input[type="text"],.loginbox input[type="password"] {
+.mp .loginbox input[type="text"],.loginbox input[type="password"] {
     background: none;
     display: block;
     text-align: left;
@@ -435,17 +456,32 @@ li.cateItem a:hover {
     transition: 0.5s;
 }
 
-.loginbox input[type="text"]:focus,.loginbox input[type="password"]:focus {
+.mp .loginbox input[type="text"]:focus,.loginbox input[type="password"]:focus {
     width: 280px;
     border-color: #eaac00;
 }
+.mp .account {
+    text-align: center;
+}
+.mp table tr {
+    border-color: #6c757d;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+.mp table tr td {
+    border-color: #6c757d;
+    border-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-right-width: 1px;
+    border-left-width: 1px;
+}
 
-
-.itemtb{
+.mp .itemtb{
     background-color:#FAD294DD ;
 }
 
-#productAutoComplete {
+.mp #productAutoComplete {
     background: #ccc;
     position: relative;
     top: -25px;
@@ -454,13 +490,13 @@ li.cateItem a:hover {
     display: none;
 }
 
-#productAutoList {
+.mp #productAutoList {
     margin: 0;
     padding: 0;
     border: 1px solid #aaa;
 }
 
-.productAutoItem {
+.mp .productAutoItem {
     list-style: none;
     text-align: left;
     height: 18.5px;
@@ -472,3 +508,97 @@ li.cateItem a:hover {
     color: #000000;
     cursor: pointer;
 }
+
+
+
+.mp .nav-search {
+    position: absolute;
+    width: 1080px;
+    height: 586px;
+    padding: 0 20px;
+}
+
+.w .mp{
+    width: 1080px;
+    /*margin: 0 auto;*/
+    height: 586px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.btn {
+    display: inline-block;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    border: none;
+    background-color: #215496;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+}
+
+
+
+.nav-search .mp .search-content {
+    padding: 40px 0 30px 250px;
+}
+
+.nav-search .mp .search-content .search-input {
+    width: 500px;
+    position: relative;
+    display: inline-block;
+    height: 44px;
+    left: 80px;
+    line-height: 40px;
+    font-size: 18px;
+    border: 2px solid #215496;
+    padding-left: 10px;
+    outline: none;
+}
+
+
+.nav-search .mp .search-btn {
+    position: relative;
+    width: 80px;
+    top: -1px;
+    height: 44px;
+    font-size: 20px;
+}
+
+.nav-search .logo {
+
+    position: absolute;
+    /*left: 80px;*/
+    top: 85px;
+    height: 52px;
+    width: 215px;
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    color: #eaac00;
+}
+
+.nav-search .w{
+    padding-bottom: 400px;
+}
+
+.mp .search-input {
+    position: absolute;
+    display: inline-block;
+    height: 44px;
+    width: 800px;
+}
+
+.mp .none #none{
+    position: relative;
+    height: 70px;
+}
+
+

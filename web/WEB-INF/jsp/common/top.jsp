@@ -10,7 +10,7 @@
 <head>
     <title>MyPetStore</title>
 
-    <link rel="StyleSheet" href="./CSS/petstore.css" type="text/css" media="screen" />
+
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,600,800" rel="stylesheet">
@@ -23,15 +23,15 @@
 
     <!-- Animation CSS -->
     <link href="./assets/css/vendor/aos.css" rel="stylesheet"/>
+    <link rel="StyleSheet" href="./CSS/petstore.css" type="text/css" media="screen" />
 </head>
-
 <body >
 
 
 
 <nav class="topnav navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="cartForm"><i class="fas fa-anchor mr-2"></i><strong>Pet</strong> store</a>
+        <a class="navbar-brand" href="mainForm"><i class="fas fa-anchor mr-2"></i><strong>Pet</strong> store</a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                 data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -60,7 +60,7 @@
             <ul class="navbar-nav ml-auto d-flex align-items-center">
 
                 <li class="nav-item">
-                    <a  class="nav-link" href="">搜索 <i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a  class="nav-link" href="searchForm">搜索 <i class="fa-solid fa-magnifying-glass"></i></a>
                 </li>
 
                 <li class="nav-item">
@@ -70,14 +70,21 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                        aria-haspopup="true" aria-expanded="false">账户 <i class="fa-solid fa-user"></i></a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href=""><i class="fa-solid fa-door-open"></i> 登录</a>
-                        <a class="dropdown-item" href=""><i class="fa-solid fa-registered"></i> 注册</a>
-                        <a class="dropdown-item" href=""><i class="fa-solid fa-address-card"></i> 个人中心</a>
-                        <a class="dropdown-item" href=""><i class="fa-solid fa-cart-shopping"></i> 购物车</a>
+
+                        <c:if test="${sessionScope.loginAccount == null}">
+                            <a class="dropdown-item" href="signOnForm"><i class="fa-solid fa-door-open"></i> 登录</a>
+                            <a class="dropdown-item" href="newAccountForm"><i class="fa-solid fa-registered"></i> 注册</a>
+                        </c:if>
+                        <c:if test="${sessionScope.loginAccount != null}">
+                            <a class="dropdown-item" href="myAccount"><i class="fa-solid fa-address-card"></i> 个人中心</a>
+                            <a class="dropdown-item" href="signOff"><i class="fa-solid fa-right-to-bracket"></i> 登出</a>
+                        </c:if>
+
+                        <a class="dropdown-item" href="cartForm"><i class="fa-solid fa-cart-shopping"></i> 购物车</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="navbar-brand" href="cartForm">&nbsp;  <i class="fa-solid fa-house-chimney"></i></a>
+                    <a class="navbar-brand" href="mainForm">&nbsp;  <i class="fa-solid fa-house-chimney"></i></a>
                     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                             data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
                     </button>

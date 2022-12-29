@@ -1,8 +1,8 @@
 <%@ include file="../common/top.jsp"%>
 <%@page pageEncoding="utf-8"%>
 
-<div id="Catalog" >
-    <div class="account">
+<div id="Catalog" class="mp">
+    <div class="account mp">
 <%--  <stripes:form--%>
 <%--        beanclass="org.mybatis.jpetstore.web.actions.AccountActionBean"--%>
 <%--        focus="">--%>
@@ -30,7 +30,7 @@
 <%--</stripes:form>--%>
 
 
-  <form action="editAccount" method="post">
+  <form class="mp" action="editAccount" method="post">
     <h2>用户信息</h2>
 
     <table >
@@ -56,7 +56,7 @@
     <%@ include file="includeAccountFields.jsp"%>
 
 <%--    <stripes:submit name="editAccount" value="repeatedPassword" />--%>
-    <input type="submit" name="editAccount" value="更新信息" style=";border-radius: 5px;border-width: 1px">
+    <input class="mp" type="submit" name="editAccount" value="更新信息" style=";border-radius: 5px;border-width: 1px">
 
   </form>
 

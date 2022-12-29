@@ -3,10 +3,10 @@
 <%@page pageEncoding="utf-8"%>
 
 
-<div id="Catalog">
+<div id="Catalog " class="mp">
 
 <%--                                        1--%>
-    <form action="continueOrder" method="post">
+    <form action="continueOrder" method="post" class="mp">
         <table>
             <tr>
                 <th colspan=2>支付明细</th>
@@ -127,7 +127,7 @@
         </table>
 
 
-        <input type="submit" name="newOrder" value="继续">
+        <input class="mp" type="submit" name="newOrder" value="继续">
     </form>
 
 

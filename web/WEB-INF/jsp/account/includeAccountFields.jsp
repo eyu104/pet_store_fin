@@ -3,9 +3,9 @@
 
 <h2>详细信息</h2>
 
-<div class="account">
+<div class="account mp" >
 
-<table >
+<table class="mp">
     <tr>
         <td>名:</td>
         <td>
@@ -189,7 +189,7 @@
 
 <h2>主页信息</h2>
 
-<table>
+<table class="mp">
     <tr>
         <td>语言偏好:</td>
         <td>

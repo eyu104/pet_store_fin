@@ -1,11 +1,11 @@
 <%@ include file="../common/top.jsp"%>
 <%@page pageEncoding="utf-8"%>
 
-<div id="Catalog">
+<div id="Catalog" class="mp">
 
 
 <%--                     1.2                --%>
-    <form action="confirmOrderForm" method="post">
+    <form action="confirmOrderForm" method="post" class="mp">
         <table>
             <tr>
                 <th colspan=2>收货地址</th>
@@ -74,7 +74,7 @@
         </table>
 
 <%--        <stripes:submit name="newOrder" value="Continue" />--%>
-        <input type="submit" name="newOrder" value="Continue">
+        <input class="mp" type="submit" name="newOrder" value="Continue">
     </form>
 </div>
 

@@ -3,7 +3,7 @@
 
 <h2>我的订单</h2>
 
-<table>
+<table class="mp">
     <tr>
         <th>订单ID</th>
         <th>日期</th>

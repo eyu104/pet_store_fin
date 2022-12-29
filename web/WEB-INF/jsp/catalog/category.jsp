@@ -1,12 +1,12 @@
 <%@ include file="../common/top.jsp"%>
 <%@page pageEncoding="utf-8"%>
 
-<div id="Catalog">
+<div id="Catalog" class="mp">
 
     <h2>${sessionScope.category.name}</h2>
 
-    <table>
-        <tr class="firsttr">
+    <table class="mp">
+        <tr class="firsttr mp">
             <th>产品ID</th>
             <th>名称</th>
         </tr>

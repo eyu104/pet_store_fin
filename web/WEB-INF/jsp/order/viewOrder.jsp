@@ -1,13 +1,13 @@
 <%@ include file="../common/top.jsp"%>
 <%@page pageEncoding="utf-8"%>
 
-<div id="BackLink">
-    <a href="mainForm" >Return to Main Menu</a>
+<div id="BackLink" class="mp">
+    <a class="mp" href="mainForm" >Return to Main Menu</a>
 </div>
 
-<div id="Catalog">
+<div class="mp" id="Catalog">
 
-    <table>
+    <table class="mp">
         <tr>
             <th align="center" colspan="2">Order #${sessionScope.order.orderId}
                 <fmt:formatDate value="${sessionScope.order.orderDate}"
