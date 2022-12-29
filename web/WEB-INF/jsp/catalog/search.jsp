@@ -5,7 +5,7 @@
 
     <table class="mp">
         <tr>
-            <th>&nbsp;</th>
+            <th>description</th>
             <th>Product ID</th>
             <th>Name</th>
         </tr>

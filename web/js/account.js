@@ -33,34 +33,6 @@ $(function (){
         signOnMsg.html(Msg);
     });
 
-    //ajax验证码
-   // $('#loginForm').submit(function (e){
-   //     var secode = $('#secode').val().toLowerCase(),
-   //         checkcode = null;
-   //     e.preventDefault();
-   //     $.ajax({
-   //         type: 'GET',
-   //         url: 'http://localhost:8080/petstore/getCheckcode',
-   //         success: function (data) {
-   //             checkcode = data.toLowerCase();
-   //             console.log(checkcode);
-   //             console.log(secode);
-   //             if (checkcode == secode){
-   //                 console.log('验证码正确');
-   //             }else {
-   //                 signOnMsg.html('验证码错误，请重试');
-   //             }
-   //         },
-   //         error: function (errorMsg) {
-   //             console.log(errorMsg);
-   //         }
-   //     });
-   // });
-
-   // $('#loginForm').prototype.onsubmit = function (){
-   //
-   // };
-
 
 
     $('#secode').on('blur',function (){
@@ -75,6 +47,7 @@ $(function (){
                 console.log(secode);
                 if (checkcode == secode){
                     console.log('验证码正确');
+                    signOnMsg.html('');
                     $('#loginForm').dataset.ok = true;
                 }else {
                     signOnMsg.html('验证码错误，请重试');
