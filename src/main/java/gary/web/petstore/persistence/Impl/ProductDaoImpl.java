@@ -4,7 +4,7 @@ import gary.web.petstore.domain.Product;
 import gary.web.petstore.persistence.DBUtil;
 import gary.web.petstore.persistence.ProductDao;
 
-import javax.servlet.jsp.tagext.TryCatchFinally;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
