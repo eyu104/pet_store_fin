@@ -1,7 +1,6 @@
 package gary.web.petstore.persistence;
 
 import gary.web.petstore.domain.Account;
-
 import java.sql.SQLException;
 
 public interface AccountDao {

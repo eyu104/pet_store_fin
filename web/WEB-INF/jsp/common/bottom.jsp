@@ -4,7 +4,8 @@
 </div>
 <div id="Footer" class="mp">
 
-    <div id="PoweredBy"  class="mp" style="background-color: #EAAC00FF">&nbsp<a href="http://www.csu.edu.cn" style="color: white"><b class="mp addre">www.csu.edu.cn</b></a>
+    <div id="PoweredBy"  class="mp" style="background-color: #EAAC00FF">
+        &nbsp<a href="http://www.csu.edu.cn" style="color: white"><b class="mp addre">www.csu.edu.cn</b></a>
     </div>
 
     <div id="Banner" style="background-color: #EAAC00FF" class="mp">
